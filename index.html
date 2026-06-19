@@ -15,7 +15,7 @@
             <nav class="nav-links" aria-label="Primary navigation">
                 <a href="#home">Home</a>
                 <a href="#education">Education</a>
-                <a href="#coursework">Coursework</a>
+                <a href="coursework.html">Coursework</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
@@ -23,64 +23,26 @@
             </nav>
         </header>
 
-        <main>
+        <main class="body-offset">
             <section id="home" class="section">
-                <h1 class="main-title">Disas Sooriyarachchi</h1>
-                <p class="subtitle">Mechanical Engineering student interested in UAVs, robotics, autonomous systems, and manufacturing.</p>
+                <div class="profile-panel">
+                    <div>
+                        <h1 class="main-title">Disas Sooriyarachchi</h1>
+                        <p class="subtitle">Mechanical Engineering student interested in UAVs, robotics, autonomous systems, and manufacturing.</p>
+                    </div>
+                    <img class="profile-image" src="assets/images/profile.jpg" alt="Disas Sooriyarachchi">
+                </div>
             </section>
 
             <section id="education" class="section">
                 <h2 class="section-title">Education</h2>
                 <div class="card">
                     <h3>Georgia Institute of Technology</h3>
-                    <p>Mechanical Engineering</p>
-                    <p class="section-note">Placeholder for GPA, graduation date, concentration, and minor.</p>
-                </div>
-            </section>
-
-            <section id="coursework" class="section">
-                <h2 class="section-title">Coursework</h2>
-                <div class="list-columns">
-                    <div class="card card-compact">
-                        <h3>Mechanical Engineering</h3>
-                        <ul class="card-list">
-                            <li>Introductory Mechanics</li>
-                            <li>Thermodynamics</li>
-                            <li>Materials and Structures</li>
-                        </ul>
-                    </div>
-                    <div class="card card-compact">
-                        <h3>Robotics and Controls</h3>
-                        <ul class="card-list">
-                            <li>Systems Modeling</li>
-                            <li>Feedback Control</li>
-                            <li>Embedded Motion Planning</li>
-                        </ul>
-                    </div>
-                    <div class="card card-compact">
-                        <h3>Computer Science / Programming</h3>
-                        <ul class="card-list">
-                            <li>Programming Fundamentals</li>
-                            <li>Data Structures</li>
-                            <li>Applied Algorithms</li>
-                        </ul>
-                    </div>
-                    <div class="card card-compact">
-                        <h3>Math and Physics</h3>
-                        <ul class="card-list">
-                            <li>Calculus and Differential Equations</li>
-                            <li>Linear Algebra</li>
-                            <li>Dynamics and Electromechanics</li>
-                        </ul>
-                    </div>
-                    <div class="card card-compact">
-                        <h3>Manufacturing and Design</h3>
-                        <ul class="card-list">
-                            <li>Design for Manufacturing</li>
-                            <li>CAD and Prototyping</li>
-                            <li>Additive Manufacturing Basics</li>
-                        </ul>
-                    </div>
+                    <p>Bachelor of Science in Mechanical Engineering</p>
+                    <p class="section-note">
+                        Minor: Robotics | Expected Graduation: May 2028 | GPA: 3.91
+                    </p>
+                    <p><a href="coursework.html">View full coursework →</a></p>
                 </div>
             </section>
 
@@ -115,28 +77,102 @@
                 <h2 class="section-title">Projects</h2>
                 <div class="project-grid">
                     <a class="project-link" href="projects/dbvf-vtol.html">
-                        <h3>VFS DBVF Award-Winning VTOL Aircraft</h3>
-                        <p>Professional UAV design work with a focus on vertical flight and system integration.</p>
+                        <div class="project-card-content">
+                            <div class="project-info">
+                                <div>
+                                    <h3>VFS DBVF Award-Winning VTOL Aircraft</h3>
+                                    <p>Student competition aircraft project focused on VTOL design, integration, and testing. This page will document my chief engineer responsibilities, design decisions, system architecture, and the team’s first-place result.</p>
+                                </div>
+                                <div class="project-card-action">Read More →</div>
+                            </div>
+                            <div class="project-visual">
+                                <img class="project-cover" src="assets/images/dbvf.jpeg" alt="VFS DBVF Award-Winning VTOL Aircraft">
+                            </div>
+                        </div>
                     </a>
                     <a class="project-link" href="projects/ampf-transformer.html">
-                        <h3>AMPF Buzz-to-Ford Transformer Robot</h3>
-                        <p>Robotic manipulation platform concept for a competitive engineering challenge.</p>
+                        <div class="project-card-content">
+                            <div class="project-info">
+                                <div>
+                                    <h3>AMPF Buzz-to-Ford Transformer Robot</h3>
+                                    <p>Research prototype developed with a four-person team at Georgia Tech’s Advanced Manufacturing Pilot Facility. This page will document the transformation mechanism, CAD work, manufacturability constraints, and prototype development process.</p>
+                                </div>
+                                <div class="project-card-action">Read More →</div>
+                            </div>
+                            <div class="project-visual">
+                                <div class="cover-placeholder">No cover image available</div>
+                            </div>
+                        </div>
                     </a>
                     <a class="project-link" href="projects/submarine-rov.html">
-                        <h3>ArduSub-Based Submarine ROV</h3>
-                        <p>Remotely operated underwater vehicle built around open-source control hardware.</p>
+                        <div class="project-card-content">
+                            <div class="project-info">
+                                <div>
+                                    <h3>ArduSub-Based Submarine ROV</h3>
+                                    <p>In-progress underwater robotics platform involving Pixhawk, ArduSub, BlueOS, QGroundControl, thruster integration, camera control, lighting, and system debugging. This page will document the build and testing process.</p>
+                                </div>
+                                <div class="project-card-action">Read More →</div>
+                            </div>
+                            <div class="project-visual">
+                                <div class="cover-placeholder">No cover image available</div>
+                            </div>
+                        </div>
                     </a>
                     <a class="project-link" href="projects/fpv-drone-builds.html">
-                        <h3>Custom FPV Drone Builds and UAV Development</h3>
-                        <p>Custom drone builds focused on performance, reliability, and practical development.</p>
+                        <div class="project-card-content">
+                            <div class="project-info">
+                                <div>
+                                    <h3>Custom FPV Drone Builds and UAV Development</h3>
+                                    <p>Custom FPV drone builds focused on hardware integration, flight controller setup, tuning, reliability, and practical flight testing. This page will document the builds, electronics, lessons learned, and ongoing UAV development work.</p>
+                                </div>
+                                <div class="project-card-action">Read More →</div>
+                            </div>
+                            <div class="project-visual">
+                                <img class="project-cover" src="assets/images/fpvdrone.jpeg" alt="Custom FPV Drone Builds and UAV Development">
+                            </div>
+                        </div>
                     </a>
                     <a class="project-link" href="projects/mehendi-printer.html">
-                        <h3>Curved-Surface Mehendi Robotic Printer</h3>
-                        <p>Prototype system for applying designs to curved surfaces with automation support.</p>
+                        <div class="project-card-content">
+                            <div class="project-info">
+                                <div>
+                                    <h3>Curved-Surface Mehendi Robotic Printer</h3>
+                                    <p>Robotic printer concept for applying mehendi patterns to a curved arm surface. This page will document the image-processing pipeline, toolpath generation approach, mechanical design choices, and prototype progress.</p>
+                                </div>
+                                <div class="project-card-action">Read More →</div>
+                            </div>
+                            <div class="project-visual">
+                                <img class="project-cover" src="assets/images/mehendi.jpeg" alt="Curved-Surface Mehendi Robotic Printer">
+                            </div>
+                        </div>
                     </a>
                     <a class="project-link" href="projects/hexapod-robot.html">
-                        <h3>Raspberry Pi Hexapod Robot</h3>
-                        <p>Multi-legged robot built with single-board compute and basic autonomous motion planning.</p>
+                        <div class="project-card-content">
+                            <div class="project-info">
+                                <div>
+                                    <h3>Raspberry Pi Hexapod Robot</h3>
+                                    <p>18-servo legged robot built around a Raspberry Pi and PCA9685 servo control. This page will document the mechanical assembly, servo control structure, gait planning experiments, and embedded robotics lessons.</p>
+                                </div>
+                                <div class="project-card-action">Read More →</div>
+                            </div>
+                            <div class="project-visual">
+                                <img class="project-cover" src="assets/images/hexapod.jpeg" alt="Raspberry Pi Hexapod Robot">
+                            </div>
+                        </div>
+                    </a>
+                    <a class="project-link" href="projects/me2110-competition-robot.html">
+                        <div class="project-card-content">
+                            <div class="project-info">
+                                <div>
+                                    <h3>ME 2110 Competition Robot</h3>
+                                    <p>Competition robot developed for Georgia Tech ME 2110. This page will document the design challenge, mechanical design approach, manufacturing work, testing, and competition outcome.</p>
+                                </div>
+                                <div class="project-card-action">Read More →</div>
+                            </div>
+                            <div class="project-visual">
+                                <img class="project-cover" src="assets/images/me2110_comp.jpeg" alt="ME 2110 Competition Robot">
+                            </div>
+                        </div>
                     </a>
                 </div>
             </section>
@@ -171,7 +207,7 @@
                 <h2 class="section-title">Contact</h2>
                 <div class="card">
                     <p>Email: <a href="mailto:disas2005@gmail.com">disas2005@gmail.com</a></p>
-                    <p>LinkedIn: <a href="#">linkedin.com/in/placeholder</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/disas">linkedin.com/in/disas</a></p>
                     <p>GitHub: <a href="https://github.com/05disas">github.com/05disas</a></p>
                 </div>
             </section>
@@ -181,7 +217,7 @@
             <p>Disas Sooriyarachchi — Mechanical Engineering Portfolio</p>
             <div class="social-links">
                 <a href="mailto:disas2005@gmail.com">Email</a>
-                <a href="#">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/disas">LinkedIn</a>
                 <a href="https://github.com/05disas">GitHub</a>
             </div>
         </footer>

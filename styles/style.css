@@ -149,6 +149,91 @@ textarea {
     gap: 18px;
 }
 
+.project-card-content {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.project-info {
+    flex: 1 1 58%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.project-card-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 12px;
+    background: rgba(110, 187, 255, 0.14);
+    color: #c8d1e0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.project-visual {
+    flex: 0 0 42%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-cover,
+.icon-placeholder,
+.cover-placeholder {
+    width: 100%;
+    height: 240px;
+    border-radius: 18px;
+    object-fit: contain;
+    border: 1px solid rgba(178, 187, 213, 0.12);
+    background: #08101e;
+}
+
+.icon-placeholder,
+.cover-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9fb4d8;
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 0 8px;
+}
+
+.project-page-cover {
+    width: 96px;
+    height: 96px;
+    max-width: none;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 18px;
+    object-fit: cover;
+    border: 1px solid rgba(178, 187, 213, 0.12);
+    background: #08101e;
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(110, 187, 255, 0.2);
+    max-width: 180px;
+}
+
+.profile-panel {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: center;
+}
+
 .project-link {
     display: block;
     padding: 20px;
@@ -219,6 +304,37 @@ textarea {
 
     .nav-links {
         gap: 12px;
+    }
+
+    .profile-image {
+        width: 140px;
+        height: 140px;
+    }
+
+    .project-card-content {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .project-info {
+        width: 100%;
+    }
+
+    .project-visual {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .project-cover,
+    .icon-placeholder,
+    .cover-placeholder {
+        width: 100%;
+        height: 220px;
+    }
+
+    .project-page-cover {
+        width: 96px;
+        height: 96px;
     }
 }
 
