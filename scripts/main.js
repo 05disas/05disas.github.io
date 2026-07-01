@@ -1,6 +1,13 @@
 // Small navigation toggle for mobile
 (function(){
   function init() {
+    function updateHeaderTitle() {
+      document.body.classList.toggle('is-scrolled', window.scrollY > 80);
+    }
+
+    updateHeaderTitle();
+    window.addEventListener('scroll', updateHeaderTitle, { passive: true });
+
     var btns = document.querySelectorAll('.nav-toggle');
     Array.prototype.forEach.call(btns, function(btn){
       btn.addEventListener('click', function(){

@@ -47,7 +47,7 @@ textarea {
 .page-shell {
     width: min(100%, 1100px);
     margin: 0 auto;
-    padding: 24px 20px 48px;
+    padding: 0 20px 48px;
 }
 
 .header,
@@ -60,12 +60,14 @@ textarea {
 }
 
 .header {
-    padding: 8px 0 24px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 12px max(20px, calc((100vw - 1100px) / 2 + 20px));
     position: sticky;
     top: 0;
     z-index: 20;
-    background: rgba(9, 11, 16, 0.94);
-    backdrop-filter: saturate(180%) blur(16px);
+    background: radial-gradient(circle at top, rgba(48, 58, 84, 0.35), transparent 25%),
+        linear-gradient(180deg, #090b10 0%, #050608 100%);
 }
 
 .site-title {
@@ -74,6 +76,15 @@ textarea {
     letter-spacing: 0.16em;
     font-weight: 700;
     margin: 0;
+}
+
+.home-page .site-title {
+    opacity: 0;
+    transition: opacity 180ms ease;
+}
+
+.home-page.is-scrolled .site-title {
+    opacity: 1;
 }
 
 .nav-links {
@@ -88,22 +99,20 @@ textarea {
     display: none;
     background: transparent;
     border: 1px solid rgba(110, 187, 255, 0.18);
-    border-radius: 12px;
-    width: 44px;
-    height: 44px;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     color: #c8d1e0;
 }
 
-.nav-toggle span {
+.nav-toggle img {
     display: block;
     width: 22px;
-    height: 2px;
-    border-radius: 999px;
-    background: #6ebbff;
-    margin: 3px 0;
+    height: 22px;
+    filter: invert(78%) sepia(40%) saturate(1510%) hue-rotate(178deg) brightness(103%) contrast(101%);
 }
 
 .header.nav-open .nav-links {
@@ -124,6 +133,7 @@ textarea {
 
 .section {
     margin-top: 40px;
+    scroll-margin-top: 96px;
 }
 
 .section-title {
@@ -165,6 +175,73 @@ textarea {
     gap: 16px;
 }
 
+.coursework-section {
+    display: grid;
+    gap: 34px;
+}
+
+.course-category h2 {
+    margin: 0 0 14px;
+    color: #e8ecf3;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.course-card {
+    min-height: 132px;
+    padding: 20px;
+    border-radius: 18px;
+    background: rgba(18, 24, 40, 0.92);
+    border: 1px solid rgba(110, 187, 255, 0.18);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.course-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.course-card h3 {
+    margin: 0;
+    color: #e8ecf3;
+    font-size: 1.08rem;
+    line-height: 1.25;
+}
+
+.course-card p {
+    margin: 0;
+    color: #c8d1e0;
+}
+
+.course-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    min-width: 34px;
+    height: 34px;
+    padding: 0 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(110, 187, 255, 0.5);
+    background: rgba(110, 187, 255, 0.12);
+    color: #9cccff;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.course-status-wide {
+    min-width: 78px;
+}
+
 .card-list {
     list-style: none;
     margin: 0;
@@ -185,7 +262,7 @@ textarea {
     grid-template-columns: minmax(0, 58%) minmax(0, 42%);
     grid-template-areas: "title image" "body image";
     gap: 24px;
-    align-items: start;
+    align-items: stretch;
 }
 
 .project-title {
@@ -204,6 +281,12 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    min-height: 240px;
 }
 
 .project-cover,
@@ -269,7 +352,7 @@ textarea {
     align-items: center;
 }
 
-.project-link {
+.project-card {
     display: block;
     padding: 20px;
     border-radius: 18px;
@@ -277,13 +360,23 @@ textarea {
     border: 1px solid rgba(110, 187, 255, 0.12);
 }
 
-.project-link h3 {
+.project-card h3 {
     margin: 0 0 6px;
 }
 
-.project-link p {
+.project-card p {
     margin: 0;
     color: #b5c2db;
+}
+
+.project-title-link {
+    color: #6ebbff;
+    text-decoration: underline;
+}
+
+.project-card-action {
+    margin-top: auto;
+    text-decoration: none;
 }
 
 .small-text {
@@ -331,7 +424,11 @@ textarea {
 }
 
 @media (max-width: 720px) {
-    .header,
+    .header {
+        flex-direction: row;
+        align-items: center;
+    }
+
     .footer {
         flex-direction: column;
         align-items: flex-start;
@@ -339,11 +436,20 @@ textarea {
 
     .nav-toggle {
         display: inline-flex;
+        order: 1;
+    }
+
+    .header > div,
+    .header > .site-title {
+        order: 2;
+        flex: 1;
+        min-width: 0;
     }
 
     .nav-links {
         display: none;
         flex-direction: column;
+        order: 3;
         width: 100%;
         gap: 12px;
         padding: 16px 0;

@@ -6,16 +6,14 @@
     <title>Disas Sooriyarachchi | Mechanical Engineering Portfolio</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
+<body class="home-page">
     <div class="page-shell">
         <header class="header">
             <div>
                 <p class="site-title">Disas Sooriyarachchi</p>
             </div>
             <button class="nav-toggle" type="button" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <img src="assets/menu-icon.svg" alt="" aria-hidden="true">
             </button>
             <nav class="nav-links" aria-label="Primary navigation">
                 <a href="#home">Home</a>
@@ -24,6 +22,7 @@
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
+                <a href="#activities">Activities</a>
                 <a href="#contact">Contact</a>
             </nav>
         </header>
@@ -33,7 +32,7 @@
                 <div class="profile-panel">
                     <div>
                         <h1 class="main-title">Disas Sooriyarachchi</h1>
-                        <p class="subtitle">Mechanical Engineering student interested in UAVs, robotics, autonomous systems, and manufacturing.</p>
+                        <p class="subtitle">Mechanical Engineering student at Georgia Tech focused on UAVs, robotics, automation, and manufacturing.</p>
                     </div>
                     <img class="profile-image" src="assets/images/profile.jpg" alt="Disas Sooriyarachchi">
                 </div>
@@ -45,9 +44,10 @@
                     <h3>Georgia Institute of Technology</h3>
                     <p>Bachelor of Science in Mechanical Engineering</p>
                     <p class="section-note">
-                        Minor: Robotics | Expected Graduation: May 2028 | GPA: 3.91
+                        Concentration: Automation and Robotics | Expected Graduation: May 2028 | GPA: 3.91/4.00
                     </p>
-                    <p><a href="coursework.html">View full coursework →</a></p>
+                    <p class="section-note">FAA Part 107 Remote Pilot Certification &mdash; Small UAS</p>
+                    <p><a href="coursework.html">View full coursework &rarr;</a></p>
                 </div>
             </section>
 
@@ -55,24 +55,24 @@
                 <h2 class="section-title">Work Experience</h2>
                 <div class="section-grid">
                     <div class="card">
-                        <h3>Research Assistant — Advanced Manufacturing Pilot Facility</h3>
+                        <h3>Undergraduate Research Assistant &mdash; Georgia Tech Advanced Manufacturing Pilot Facility</h3>
                         <ul class="card-list">
-                            <li>Supported lab workflows with data collection and equipment setup.</li>
-                            <li>Helped maintain manufacturing test articles and facility documentation.</li>
+                            <li>Modeled a transforming Ramblin&rsquo; Wreck-to-Buzz structure in SolidWorks and reduced mass by 40%.</li>
+                            <li>Explored alloy-based manufacturing strategies for CNC, PBF, and EDM constraints.</li>
                         </ul>
                     </div>
                     <div class="card">
-                        <h3>UAV Engineering Intern</h3>
+                        <h3>UAV Engineering Intern &mdash; Idea8</h3>
                         <ul class="card-list">
-                            <li>Collaborated on prototype design reviews and component selection.</li>
-                            <li>Provided test support for flight-control and sensor integration.</li>
+                            <li>Rebuilt and documented an ArduSub-based underwater ROV using BlueOS, QGroundControl, Raspberry Pi, and Pixhawk.</li>
+                            <li>Identified missing hardware, designed replacement parts, sourced suppliers, and coordinated manufacturing.</li>
                         </ul>
                     </div>
                     <div class="card">
-                        <h3>Drone Operator — Georgia Tech Police Department</h3>
+                        <h3>Drone Operator &mdash; Georgia Tech Police Department</h3>
                         <ul class="card-list">
-                            <li>Assisted with operational readiness and pre-flight planning.</li>
-                            <li>Observed safety protocols and regulatory compliance.</li>
+                            <li>Operate a surveillance drone for gunshot detection alerts and officer assistance requests.</li>
+                            <li>Coordinate deployments, monitor live video, and communicate observations to officers.</li>
                         </ul>
                     </div>
                 </div>
@@ -81,104 +81,90 @@
             <section id="projects" class="section">
                 <h2 class="section-title">Projects</h2>
                 <div class="project-grid">
-                    <a class="project-link" href="projects/dbvf-vtol.html">
+                    <div class="project-card">
                         <div class="project-card-content">
                             <div class="project-info">
                                 <div>
-                                    <h3>VFS DBVF Award-Winning VTOL Aircraft</h3>
-                                    <p>Student competition aircraft project focused on VTOL design, integration, and testing. This page will document my chief engineer responsibilities, design decisions, system architecture, and the team’s first-place result.</p>
+                                    <h3><a class="project-title-link" href="projects/dbvf-vtol.html">VFS DBVF Award-Winning VTOL Aircraft</a></h3>
+                                    <p>Led a 20+ member Georgia Tech DBVF team as Chief Engineer to 1st place overall in the 2026 Vertical Flight Society competition.</p>
                                 </div>
-                                <div class="project-card-action">Read More →</div>
+                                <a class="project-card-action" href="projects/dbvf-vtol.html">Read More &rarr;</a>
                             </div>
                             <div class="project-visual">
                                 <img class="project-cover" src="assets/images/dbvf.jpeg" alt="VFS DBVF Award-Winning VTOL Aircraft">
                             </div>
                         </div>
-                    </a>
-                    <a class="project-link" href="projects/ampf-transformer.html">
+                    </div>
+                    <div class="project-card">
                         <div class="project-card-content">
                             <div class="project-info">
                                 <div>
-                                    <h3>AMPF Buzz-to-Ford Transformer Robot</h3>
-                                    <p>Research prototype developed with a four-person team at Georgia Tech’s Advanced Manufacturing Pilot Facility. This page will document the transformation mechanism, CAD work, manufacturability constraints, and prototype development process.</p>
+                                    <h3><a class="project-title-link" href="projects/submarine-rov.html">ArduSub-Based Submarine ROV</a></h3>
+                                    <p>ArduSub-based underwater ROV rebuild using BlueOS, QGroundControl, Raspberry Pi, and a Pixhawk flight controller.</p>
                                 </div>
-                                <div class="project-card-action">Read More →</div>
+                                <a class="project-card-action" href="projects/submarine-rov.html">Read More &rarr;</a>
                             </div>
                             <div class="project-visual">
                                 <div class="cover-placeholder">No cover image available</div>
                             </div>
                         </div>
-                    </a>
-                    <a class="project-link" href="projects/submarine-rov.html">
+                    </div>
+                    <div class="project-card">
                         <div class="project-card-content">
                             <div class="project-info">
                                 <div>
-                                    <h3>ArduSub-Based Submarine ROV</h3>
-                                    <p>In-progress underwater robotics platform involving Pixhawk, ArduSub, BlueOS, QGroundControl, thruster integration, camera control, lighting, and system debugging. This page will document the build and testing process.</p>
+                                    <h3><a class="project-title-link" href="projects/me2110-competition-robot.html">ME 2110 Competition Robot</a></h3>
+                                    <p>Georgia Tech ME 2110 robot project that placed 3rd in the final competition and 2nd in design review.</p>
                                 </div>
-                                <div class="project-card-action">Read More →</div>
-                            </div>
-                            <div class="project-visual">
-                                <div class="cover-placeholder">No cover image available</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="project-link" href="projects/fpv-drone-builds.html">
-                        <div class="project-card-content">
-                            <div class="project-info">
-                                <div>
-                                    <h3>Custom FPV Drone Builds and UAV Development</h3>
-                                    <p>Custom FPV drone builds focused on hardware integration, flight controller setup, tuning, reliability, and practical flight testing. This page will document the builds, electronics, lessons learned, and ongoing UAV development work.</p>
-                                </div>
-                                <div class="project-card-action">Read More →</div>
-                            </div>
-                            <div class="project-visual">
-                                <img class="project-cover" src="assets/images/fpvdrone.jpeg" alt="Custom FPV Drone Builds and UAV Development">
-                            </div>
-                        </div>
-                    </a>
-                    <a class="project-link" href="projects/mehendi-printer.html">
-                        <div class="project-card-content">
-                            <div class="project-info">
-                                <div>
-                                    <h3>Curved-Surface Mehendi Robotic Printer</h3>
-                                    <p>Robotic printer concept for applying mehendi patterns to a curved arm surface. This page will document the image-processing pipeline, toolpath generation approach, mechanical design choices, and prototype progress.</p>
-                                </div>
-                                <div class="project-card-action">Read More →</div>
-                            </div>
-                            <div class="project-visual">
-                                <img class="project-cover" src="assets/images/mehendi.jpeg" alt="Curved-Surface Mehendi Robotic Printer">
-                            </div>
-                        </div>
-                    </a>
-                    <a class="project-link" href="projects/hexapod-robot.html">
-                        <div class="project-card-content">
-                            <div class="project-info">
-                                <div>
-                                    <h3>Raspberry Pi Hexapod Robot</h3>
-                                    <p>18-servo legged robot built around a Raspberry Pi and PCA9685 servo control. This page will document the mechanical assembly, servo control structure, gait planning experiments, and embedded robotics lessons.</p>
-                                </div>
-                                <div class="project-card-action">Read More →</div>
-                            </div>
-                            <div class="project-visual">
-                                <img class="project-cover" src="assets/images/hexapod.jpeg" alt="Raspberry Pi Hexapod Robot">
-                            </div>
-                        </div>
-                    </a>
-                    <a class="project-link" href="projects/me2110-competition-robot.html">
-                        <div class="project-card-content">
-                            <div class="project-info">
-                                <div>
-                                    <h3>ME 2110 Competition Robot</h3>
-                                    <p>Competition robot developed for Georgia Tech ME 2110. This page will document the design challenge, mechanical design approach, manufacturing work, testing, and competition outcome.</p>
-                                </div>
-                                <div class="project-card-action">Read More →</div>
+                                <a class="project-card-action" href="projects/me2110-competition-robot.html">Read More &rarr;</a>
                             </div>
                             <div class="project-visual">
                                 <img class="project-cover" src="assets/images/me2110_comp.jpeg" alt="ME 2110 Competition Robot">
                             </div>
                         </div>
-                    </a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card-content">
+                            <div class="project-info">
+                                <div>
+                                    <h3><a class="project-title-link" href="projects/fpv-drone-builds.html">Custom FPV Drone Builds and UAV Development</a></h3>
+                                    <p>Custom quadcopter builds, repairs, tuning, ArduPilot setup, and Python/MAVLink interface development.</p>
+                                </div>
+                                <a class="project-card-action" href="projects/fpv-drone-builds.html">Read More &rarr;</a>
+                            </div>
+                            <div class="project-visual">
+                                <img class="project-cover" src="assets/images/fpvdrone.jpeg" alt="Custom FPV Drone Builds and UAV Development">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card-content">
+                            <div class="project-info">
+                                <div>
+                                    <h3><a class="project-title-link" href="projects/ampf-transformer.html">AMPF Buzz-to-Ford Transformer Robot</a></h3>
+                                    <p>SolidWorks-modeled transforming structure for the Georgia Tech Advanced Manufacturing Pilot Facility with a 40% mass reduction.</p>
+                                </div>
+                                <a class="project-card-action" href="projects/ampf-transformer.html">Read More &rarr;</a>
+                            </div>
+                            <div class="project-visual">
+                                <div class="cover-placeholder">No cover image available</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card-content">
+                            <div class="project-info">
+                                <div>
+                                    <h3><a class="project-title-link" href="projects/hexapod-robot.html">Raspberry Pi Hexapod Robot</a></h3>
+                                    <p>18-servo walking robot with 3D-printed SolidWorks parts, Raspberry Pi/PCA9685 control, and inverse kinematic walking algorithms.</p>
+                                </div>
+                                <a class="project-card-action" href="projects/hexapod-robot.html">Read More &rarr;</a>
+                            </div>
+                            <div class="project-visual">
+                                <img class="project-cover" src="assets/images/hexapod.jpeg" alt="Raspberry Pi Hexapod Robot">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -187,23 +173,43 @@
                 <div class="list-columns">
                     <div class="card card-compact">
                         <h3>Mechanical Design</h3>
-                        <p>Structural design, CAD modeling, material selection, and fabrication planning.</p>
+                        <p>SolidWorks, structural modeling, 3D printing, CNC/PBF/EDM design constraints, and prototyping.</p>
                     </div>
                     <div class="card card-compact">
                         <h3>UAVs and Robotics</h3>
-                        <p>UAV systems, robotic platforms, autonomous components, and flight mechanics.</p>
+                        <p>ArduPilot, PX4, MAVLink, BlueOS, Raspberry Pi, Pixhawk, and PID control fundamentals.</p>
                     </div>
                     <div class="card card-compact">
                         <h3>Manufacturing</h3>
-                        <p>Prototype workflows, additive and subtractive manufacturing, and assembly practices.</p>
+                        <p>Additive manufacturing, supplier coordination, replacement part design, and assembly workflows.</p>
                     </div>
                     <div class="card card-compact">
                         <h3>Programming</h3>
-                        <p>Programming fundamentals for embedded systems, controls, and data workflow support.</p>
+                        <p>Python, MATLAB, Java, Arduino/C++, and Python/MAVLink integration.</p>
                     </div>
                     <div class="card card-compact">
                         <h3>Tools and Software</h3>
-                        <p>CAD, simulation support tools, version control, and engineering documentation tools.</p>
+                        <p>SolidWorks, QGroundControl, BlueOS, ArduPilot tooling, and engineering documentation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="activities" class="section">
+                <h2 class="section-title">Activities</h2>
+                <div class="section-grid">
+                    <div class="card">
+                        <h3>Rotor Jackets &mdash; Georgia Tech</h3>
+                        <ul class="card-list">
+                            <li>Build, fly, race, and troubleshoot FPV drones.</li>
+                            <li>Apply flight testing and repair experience to personal UAV development.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Rowing &mdash; National Pool of Sri Lanka</h3>
+                        <ul class="card-list">
+                            <li>Earned 11 national-level medals, including 8 golds.</li>
+                            <li>Represented Sri Lanka at the Asian Rowing Championship.</li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -211,7 +217,7 @@
             <section id="contact" class="section">
                 <h2 class="section-title">Contact</h2>
                 <div class="card">
-                    <p>Email: <a href="mailto:disas2005@gmail.com">disas2005@gmail.com</a></p>
+                    <p>Email: <a href="mailto:dbs6@gatech.edu">dbs6@gatech.edu</a></p>
                     <p>LinkedIn: <a href="https://www.linkedin.com/in/disas">linkedin.com/in/disas</a></p>
                     <p>GitHub: <a href="https://github.com/05disas">github.com/05disas</a></p>
                 </div>
@@ -219,9 +225,9 @@
         </main>
 
         <footer class="footer">
-            <p>Disas Sooriyarachchi — Mechanical Engineering Portfolio</p>
+            <p>Disas Sooriyarachchi &mdash; Mechanical Engineering Portfolio</p>
             <div class="social-links">
-                <a href="mailto:disas2005@gmail.com">Email</a>
+                <a href="mailto:dbs6@gatech.edu">Email</a>
                 <a href="https://www.linkedin.com/in/disas">LinkedIn</a>
                 <a href="https://github.com/05disas">GitHub</a>
             </div>
