@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VFS DBVF Award-Winning VTOL Aircraft | Disas Sooriyarachchi</title>
+    <title>VFS DBVF Competition Aircraft - FireBuzz V2 | Disas Sooriyarachchi</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
     <div class="page-shell">
         <header class="header">
-            <p class="site-title">VFS DBVF Award-Winning VTOL Aircraft</p>
-            <nav class="nav-links">
+            <p class="site-title">VFS DBVF Competition Aircraft</p>
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation menu">
+                <img src="../assets/menu-icon.svg" alt="" aria-hidden="true">
+            </button>
+            <nav class="nav-links" aria-label="Primary navigation">
                 <a href="../index.html">Home</a>
                 <a href="../index.html#education">Education</a>
                 <a href="../coursework.html">Coursework</a>
@@ -23,47 +26,204 @@
         </header>
 
         <main>
-            <section class="section">
-                <h1>VFS DBVF Award-Winning VTOL Aircraft</h1>
-                <p class="subtitle">Georgia Tech Design Build Vertical Fly competition aircraft with autonomous mission and payload mechanism work.</p>
+            <section class="section project-hero" aria-labelledby="project-title">
+                <div class="project-hero-copy">
+                    <p class="project-kicker">Georgia Tech DRXC / 2026 VFS DBVF Competition</p>
+                    <h1 id="project-title" class="main-title">FireBuzz V2</h1>
+                    <p class="subtitle">An aircraft for autonomous precise payload pickup and delivery with the goal of simulating a simplified wildfire response mission.</p>
+                    <div class="tag-row" aria-label="Project highlights">
+                        <span class="tag">1st Overall</span>
+                        <span class="tag">Chief Engineer</span>
+                        <span class="tag">Autonomous Missions</span>
+                        <span class="tag">Payload Mechanism</span>
+                    </div>
+                </div>
+                <figure class="project-figure project-hero-media">
+                    <img src="../assets/images/dbvf.jpeg" alt="FireBuzz V2 with the Georgia Tech DBVF team after flight testing">
+                    <figcaption>FireBuzz V2 with the Georgia Tech DBVF team after flight testing.</figcaption>
+                </figure>
             </section>
 
-            <section class="section">
-                <img class="project-page-cover" src="../assets/images/dbvf.jpeg" alt="VFS DBVF Award-Winning VTOL Aircraft">
+            <section id="overview" class="section card case-study-section" aria-labelledby="overview-title">
+                <h2 id="overview-title">Overview</h2>
+                <p>FireBuzz V2 was Georgia Tech DRXC&rsquo;s 2026 entry for the Vertical Flight Society Design-Build-Vertical Flight Competition, where our team placed 1st overall. The aircraft was designed for a simulated wildfire response mission: autonomously fly to a pickup zone, collect a 5-sandbag payload bundle representing fire retardant, and deliver it accurately to a target area.</p>
+                <p>The final aircraft was a 21 lb quadcopter built around a carbon-fiber tube frame, custom carbon-fiber plates, 3D-printed interface parts, and a compact linear-actuator-based pickup system. It ran ArduPilot on a Cube Orange Plus and used a Here4 RTK GPS setup that brought worst-case landing error down to roughly 6 inches during field testing.</p>
+                <p>The project also included a deployable ground station for Mission Planner, telemetry, RTK setup, FPV monitoring, and field repairs, making FireBuzz V2 feel less like a standalone drone and more like a complete UAV mission system.</p>
+                <p class="section-jump"><a href="#results">Jump to results</a></p>
+
+                <figure class="project-figure">
+                    <img src="../assets/images/Projects/DBVF/FireBuzz%20v2.jpg" alt="FireBuzz V2 aircraft after flight testing">
+                    <figcaption>FireBuzz V2 after flight testing.</figcaption>
+                </figure>
             </section>
 
-            <section class="section card">
-                <h2>Overview</h2>
-                <p>The Georgia Tech DBVF team designs and builds a vertical flight aircraft for the Vertical Flight Society Design-Build-Vertical-Fly competition. In 2026, the team placed 1st overall.</p>
+            <section id="my-role" class="section card case-study-section" aria-labelledby="role-title">
+                <h2 id="role-title">My Role</h2>
+                <p>I served as one of the Chief Engineers for the project. My job was to help turn the work of separate subteams into one aircraft that could actually fly, pick up payloads, and survive a competition environment.</p>
+                <p>A big part of my role was technical coordination. The aircraft had airframe, avionics, autonomy, flight test, fabrication, and payload mechanism teams all working in parallel. Each group could make progress on its own, but the real challenge was making sure those decisions fit together at the aircraft level.</p>
+
+                <div class="detail-grid">
+                    <div>
+                        <h3>Coordination</h3>
+                        <p>Subteam planning, design reviews, technical decision-making, schedule planning, and final vehicle integration.</p>
+                    </div>
+                    <div>
+                        <h3>Engineering Work</h3>
+                        <p>Airframe and CAD improvements, payload pickup/drop integration, ground testing, flight testing, and competition preparation.</p>
+                    </div>
+                    <div>
+                        <h3>Systems Thinking</h3>
+                        <p>Balancing ambitious features against reliability, manufacturability, test time, and mission risk.</p>
+                    </div>
+                </div>
+
+                <p>One of the most important parts of the role was deciding where to keep the design ambitious and where to simplify. Early in the season, the team explored ideas like computer vision, IR markers, and different payload capture mechanisms. As testing progressed, we moved toward a more reliable system built around RTK positioning and a mechanically tolerant pickup mechanism.</p>
+
+                <figure class="project-figure">
+                    <img class="project-image-contain" src="../assets/images/Projects/DBVF/Early%20Stage%20Quad.jpg" alt="Early-stage FireBuzz V2 quadcopter build">
+                    <figcaption>Early-stage FireBuzz V2 build during subsystem integration.</figcaption>
+                </figure>
             </section>
 
-            <section class="section card">
-                <h2>My Role</h2>
-                <p>I led the 20+ member team as Chief Engineer for the 2026 competition and am serving as Vice President for the 2027 competition.</p>
-            </section>
+            <section id="technologies" class="section card case-study-section" aria-labelledby="technologies-title">
+                <h2 id="technologies-title">Technologies Used</h2>
+                <div class="detail-grid">
+                    <div>
+                        <h3>Flight Stack</h3>
+                        <p>Cube Orange Plus running ArduPilot for stabilization, waypoint missions, manual operation, servo outputs, GPS navigation, and payload integration.</p>
+                    </div>
+                    <div>
+                        <h3>Precision Navigation</h3>
+                        <p>Here4 RTK GPS to improve repeatability for pickup and drop missions that needed the aircraft to return to a specific location.</p>
+                    </div>
+                    <div>
+                        <h3>Payload System</h3>
+                        <p>Arduino-controlled, linear-actuator-based pickup/drop mechanism designed directly into the aircraft structure.</p>
+                    </div>
+                </div>
 
-            <section class="section card">
-                <h2>Technologies Used</h2>
-                <ul class="card-list">
-                    <li>ArduPilot-based flight system.</li>
-                    <li>RTK-GPS autonomous mission capability.</li>
-                    <li>Arduino-controlled drop/pick mechanism.</li>
+                <h3>Ground Station</h3>
+                <p>The ground station was built as a deployable field system with dual screens, Mission Planner, telemetry, RTK setup, digital FPV monitoring, and tool storage for field repairs. This ended up being a major advantage during testing because the team could diagnose, repair, and retest without leaving the field.</p>
+
+                <figure class="project-figure">
+                    <img src="../assets/images/Projects/DBVF/Ground%20station.png" alt="Deployable ground station with Mission Planner, telemetry, RTK, and FPV monitoring">
+                    <figcaption>Deployable ground station with Mission Planner, telemetry, RTK setup, and FPV monitoring.</figcaption>
+                </figure>
+
+                <h3>Payload Mechanism Goals</h3>
+                <ul class="card-list emphasis-list">
+                    <li>Give the aircraft a larger margin of error during pickup.</li>
+                    <li>Keep the mechanism compact and integrated into the frame.</li>
+                    <li>Avoid adding unnecessary weight or complexity under the vehicle.</li>
                 </ul>
+                <p>This was a good example of mechanical design and autonomy meeting in the middle. The aircraft did not need perfect positioning if the mechanism could tolerate some error. At the same time, the mechanism did not need to be overly complex if RTK could bring the drone close enough to the payload.</p>
+
+                <figure class="project-figure">
+                    <img class="project-image-contain" src="../assets/images/Projects/DBVF/linear%20rail%20with%20motor%20mounted%20to%20the%20drone.png" alt="Linear rail and motor for the FireBuzz V2 payload pickup mechanism">
+                    <figcaption>Linear rail and motor assembly for the payload pickup mechanism.</figcaption>
+                </figure>
+
+                <h3>Structure and Manufacturing</h3>
+                <p>The structure used carbon-fiber square tubes, custom carbon-fiber sandwich plates, and 3D-printed mounting/interface parts. During development, the team used laser-cut wood and acrylic plates to test geometry before committing to the final carbon-fiber parts.</p>
+                <p>That prototyping step mattered. Carbon fiber is strong and lightweight, but it is also expensive and slower to iterate. Using wood and acrylic early let the team check fit, mounting holes, mechanism placement, and assembly issues before cutting the final parts.</p>
+
+                <figure class="project-figure">
+                    <img class="project-image-contain" src="../assets/images/Projects/DBVF/Custom%20Carbon%20Fiber%20Plates.jpg" alt="Custom carbon fiber plates for the FireBuzz V2 airframe">
+                    <figcaption>Custom carbon-fiber plates used in the final airframe.</figcaption>
+                </figure>
             </section>
 
-            <section class="section card">
-                <h2>Challenges</h2>
-                <p>A major integration challenge was connecting autonomous flight behavior with a payload mechanism that could activate at specified mission waypoints.</p>
+            <section id="architecture" class="section card case-study-section" aria-labelledby="architecture-title">
+                <h2 id="architecture-title">System Architecture</h2>
+                <p>FireBuzz V2 was designed around a simple idea: make the aircraft accurate enough with RTK, but mechanically forgiving enough that it did not depend on perfection.</p>
+
+                <div class="architecture-grid">
+                    <div><strong>Aircraft</strong><span>Quadcopter VTOL platform</span></div>
+                    <div><strong>Frame</strong><span>Carbon-fiber tube structure with carbon-fiber plates</span></div>
+                    <div><strong>Flight Controller</strong><span>Cube Orange Plus</span></div>
+                    <div><strong>Autopilot</strong><span>ArduPilot</span></div>
+                    <div><strong>Navigation</strong><span>Here4 RTK GPS</span></div>
+                    <div><strong>Payload</strong><span>Five-sandbag bundle simulating fire retardant</span></div>
+                    <div><strong>Payload Mechanism</strong><span>Linear-actuator-based pickup/drop system</span></div>
+                    <div><strong>Payload Control</strong><span>Arduino-controlled system integrated with the Cube</span></div>
+                    <div><strong>Ground Station</strong><span>Mission Planner, telemetry, RTK uplink, FPV monitoring, field tools</span></div>
+                </div>
+
+                <p>The competition mission rewarded reliable execution, not just clever design. That shaped a lot of decisions. The quadcopter layout was chosen after configuration downselect work, and the team reused lessons from the previous FireBuzz design where the mission similarity made that reasonable. Instead of redesigning everything for novelty, the focus was on improving the aircraft where it mattered: payload handling, structure, accuracy, and field operations.</p>
             </section>
 
-            <section class="section card">
-                <h2>Results / Current Status</h2>
-                <p>The team placed 1st overall at the 2026 VFS DBVF competition.</p>
+            <section id="challenges" class="section card case-study-section" aria-labelledby="challenges-title">
+                <h2 id="challenges-title">Challenges</h2>
+
+                <article class="challenge-block">
+                    <h3>Precision Landing with RTK</h3>
+                    <p>RTK GPS sounds simple on paper: add a base station, get better accuracy. In practice, it became one of the biggest testing problems of the season.</p>
+                    <p>The team tested RTK versus non-RTK landing accuracy using a dummy vehicle. With RTK, the vehicle was able to land within roughly a 6-inch worst-case radius during testing. Without RTK, the error was on the order of a few feet. That difference was huge for the payload mission.</p>
+                    <p>Before risking FireBuzz V2, the team used a Holybro X500 dummy vehicle to test RTK landing accuracy and early actuation behavior on a simpler platform.</p>
+                    <p>But RTK also had field realities. The base station needed time to converge, environmental conditions mattered, and even tripod placement could affect repeatability. That made RTK setup part of the mission workflow, not just an electronics detail.</p>
+                    <figure class="project-figure">
+                        <img class="project-image-contain" src="../assets/images/Projects/DBVF/Dummy%20vehicle%20used%20for%20testing.jpg" alt="Holybro X500 dummy vehicle used for RTK and actuation testing">
+                        <figcaption>Holybro X500 dummy vehicle used for RTK accuracy and actuation testing.</figcaption>
+                    </figure>
+                </article>
+
+                <article class="challenge-block">
+                    <h3>Payload Pickup Tolerance</h3>
+                    <p>A drone picking up a payload autonomously is a hard problem because small errors stack up quickly. GPS error, wind, vehicle drift, payload alignment, mechanism backlash, and landing gear clearance all affect the pickup.</p>
+                    <p>The team explored multiple concepts early on, including sliding arms, catch bars, iris-style mechanisms, and drawstring/cinch concepts. The final direction moved toward a linear mechanism that could give the aircraft a wider capture zone without taking up too much space.</p>
+                    <p>This was one of the most interesting parts of the project because the mechanism was not just judged by whether it worked once on a table. It had to work under a flying vehicle, with the payload below the center of gravity, after the aircraft approached the pickup zone, in a competition environment.</p>
+                </article>
+
+                <article class="challenge-block">
+                    <h3>Weight and Structure</h3>
+                    <p>The team wanted FireBuzz V2 to be lighter and cleaner than the previous version, but weight reduction could not come at the cost of structural reliability. Carbon-fiber tubes, lighter plates, and redesigned 3D-printed parts were all part of that effort.</p>
+                    <p>This created a classic aerospace tradeoff: every gram saved helps flight performance, but every weak joint or poorly mounted component becomes a failure point. The team used prototype plates, print setting changes, and repeated fit checks to manage that tradeoff.</p>
+                </article>
+
+                <article class="challenge-block">
+                    <h3>Integration</h3>
+                    <p>The hardest part of the project was not the frame, the GPS, the mechanism, or the code by itself. It was the interfaces.</p>
+                    <p>The payload mechanism needed mechanical mounts, wiring, actuation logic, and flight-controller integration. The ground station needed telemetry, RTK setup, Mission Planner, and FPV. The frame had to leave enough space for batteries, avionics, wiring, payload hardware, and maintenance access. Flight testing depended on batteries, weather, people, field setup, and debugging time.</p>
+                    <p>This project made it very clear that UAV engineering is mostly integration. A part can be good on its own and still cause problems if it is hard to wire, hard to repair, badly placed, or impossible to inspect at the field.</p>
+                    <figure class="project-figure">
+                        <img class="project-image-contain" src="../assets/images/Projects/DBVF/Only%20the%20frame.png" alt="FireBuzz V2 frame with carbon-fiber tubes and motor mounts">
+                        <figcaption>Frame-level integration before final avionics, wiring, and payload hardware installation.</figcaption>
+                    </figure>
+                </article>
             </section>
 
-            <section class="section card">
-                <h2>Media</h2>
-                <p class="section-note">Additional images and design details will be added as the project page develops.</p>
+            <section id="results" class="section card case-study-section" aria-labelledby="results-title">
+                <h2 id="results-title">Results</h2>
+                <p>FireBuzz V2 placed 1st overall at the 2026 VFS Design-Build-Vertical Flight Competition.</p>
+                <p>More importantly, the aircraft completed the core mission goal: it demonstrated autonomous payload pickup capability using a real VTOL platform, not just a benchtop mechanism or simulation. The final vehicle combined autonomous navigation, RTK positioning, a custom payload system, carbon-fiber structure, field-ready ground station, and competition-level flight operations.</p>
+
+                <figure class="project-figure">
+                    <img src="../assets/images/Projects/DBVF/FireBuzz%20v2%20with%20three%20payloads%20infront%20of%20it.jpg" alt="FireBuzz V2 with three payload bundles in front of it">
+                    <figcaption>FireBuzz V2 with payload bundles during field testing.</figcaption>
+                </figure>
+
+                <figure class="project-figure">
+                    <img src="../assets/images/Projects/DBVF/Vehicle%20packed%20into%20a%20box%20for%20transportation.jpg" alt="FireBuzz V2 packed into a transportation case">
+                    <figcaption>FireBuzz V2 packed into a custom transportation case for competition travel.</figcaption>
+                </figure>
+
+                <h3>Final Aircraft Specs</h3>
+                <div class="spec-table" role="table" aria-label="Final aircraft specifications">
+                    <div role="row"><span role="cell">Vehicle size excluding propellers</span><strong role="cell">30.99 x 36.46 x 9.11 in</strong></div>
+                    <div role="row"><span role="cell">Vehicle size including propellers</span><strong role="cell">48.76 x 53.11 x 9.11 in</strong></div>
+                    <div role="row"><span role="cell">Propellers</span><strong role="cell">20 x 13 in</strong></div>
+                    <div role="row"><span role="cell">Flight battery</span><strong role="cell">2 x 12000 mAh 3S in series</strong></div>
+                    <div role="row"><span role="cell">Avionics battery</span><strong role="cell">2200 mAh 3S</strong></div>
+                    <div role="row"><span role="cell">Total weight</span><strong role="cell">21 lb</strong></div>
+                    <div role="row"><span role="cell">Payload system weight</span><strong role="cell">2.00 lb</strong></div>
+                    <div role="row"><span role="cell">Payload weight</span><strong role="cell">2.62 lb</strong></div>
+                    <div role="row"><span role="cell">Sandbags per bundle</span><strong role="cell">5</strong></div>
+                </div>
+
+                <blockquote class="reflection">
+                    <p>This project became one of my strongest engineering experiences because it combined almost everything I care about: UAVs, mechanical design, flight testing, autonomy, practical manufacturing, and team leadership.</p>
+                    <p>The biggest lesson I took away was that a successful aircraft is not just the best CAD model or the cleanest circuit diagram. It is the system that can be built, tested, repaired, understood, and trusted when the competition clock is running.</p>
+                </blockquote>
             </section>
         </main>
 
@@ -76,5 +236,6 @@
             </div>
         </footer>
     </div>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>
