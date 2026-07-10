@@ -1,0 +1,121 @@
+WEBVTT
+
+1
+00:00:00.230 --> 00:00:03.927
+Hello, my name is Disas. I'm a third year mechanical
+
+2
+00:00:03.927 --> 00:00:07.625
+engineering student at Georgia Tech 2026 summer. I'm
+
+3
+00:00:07.625 --> 00:00:11.392
+interning at Idea8. This is an underwater ROV
+
+4
+00:00:11.392 --> 00:00:15.438
+designed to make ship hull inspections safer, faster, and
+
+5
+00:00:15.438 --> 00:00:19.345
+more cost efficient. Today, many underwater inspections
+
+6
+00:00:19.345 --> 00:00:23.322
+require divers, making it expensive, time consuming, and
+
+7
+00:00:23.322 --> 00:00:27.228
+potentially hazardous. Our solution allows operators to
+
+8
+00:00:27.228 --> 00:00:30.150
+remotely inspect submerged structures.
+
+9
+00:00:30.150 --> 00:00:34.050
+On the surface, the reducing the need to deploy divers
+
+10
+00:00:34.050 --> 00:00:38.163
+there by reducing the risk and cost. The ROV streams live
+
+11
+00:00:38.163 --> 00:00:42.063
+underwater video, allowing inspectors to assess health
+
+12
+00:00:42.063 --> 00:00:46.247
+conditions, check for possible damages and corrosion. It's
+
+13
+00:00:46.247 --> 00:00:50.360
+maneuverability enables it to access hard to reach places
+
+14
+00:00:50.360 --> 00:00:54.544
+around the world and its video and lighting system enables
+
+15
+00:00:54.544 --> 00:00:58.374
+it to see in even in low light conditions. The entire
+
+16
+00:00:58.374 --> 00:01:00.430
+system is operated remotely.
+
+17
+00:01:00.430 --> 00:01:04.428
+Look at tether, allowing inspectors to control the system
+
+18
+00:01:04.428 --> 00:01:08.289
+from the surface. Our vision is to help ship owners and
+
+19
+00:01:08.289 --> 00:01:12.011
+ports improve inspection efficiency and reduce costs,
+
+20
+00:01:12.011 --> 00:01:15.734
+thereby improving worker safety and minimizing vessel
+
+21
+00:01:15.734 --> 00:01:19.526
+downtime. The vehicle is controlled through the tether
+
+22
+00:01:19.526 --> 00:01:23.593
+scene here, using the remote controller over there to send
+
+23
+00:01:23.593 --> 00:01:27.730
+command and receive feedback onto the laptop. The submarine
+
+24
+00:01:27.730 --> 00:01:30.440
+uses 8 thrusters, enabling it to move.
+
+25
+00:01:30.440 --> 00:01:34.107
+In all directions, the camera system provides live feedback
+
+26
+00:01:34.107 --> 00:01:37.652
+and the two light scene on the two sides can be turned on
+
+27
+00:01:37.652 --> 00:01:41.319
+in dark conditions and turned off to save power. The camera,
+
+28
+00:01:41.319 --> 00:01:45.048
+which is seen in the top compartment, can be adjusted using
+
+29
+00:01:45.048 --> 00:01:48.165
+a server, giving the operator a better view of the
+
+30
+00:01:48.165 --> 00:01:50.960
+surroundings.

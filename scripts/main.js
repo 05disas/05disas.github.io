@@ -14,6 +14,7 @@
         var header = btn.closest('.header');
         if (!header) return;
         header.classList.toggle('nav-open');
+        btn.setAttribute('aria-expanded', header.classList.contains('nav-open') ? 'true' : 'false');
       });
     });
 
@@ -24,6 +25,8 @@
         var header = link.closest('.header');
         if (!header) return;
         header.classList.remove('nav-open');
+        var toggle = header.querySelector('.nav-toggle');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
       });
     });
   }

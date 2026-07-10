@@ -200,6 +200,15 @@ textarea {
     background: rgba(18, 24, 40, 0.92);
     border: 1px solid rgba(110, 187, 255, 0.18);
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+@media (hover: hover) {
+    .course-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(110, 187, 255, 0.38);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28);
+    }
 }
 
 .course-card-header {
@@ -371,7 +380,12 @@ textarea {
 
 .project-title-link {
     color: #6ebbff;
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+.project-title-link:hover {
+    color: #9cccff;
+    text-decoration: none;
 }
 
 .project-card-action {
@@ -597,6 +611,131 @@ textarea {
     background: rgba(110, 187, 255, 0.08);
 }
 
+/* ROV project-specific diagram, native video, and testing roadmap */
+.rov-system-diagram {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    margin: 24px 0;
+    padding: 18px;
+    overflow-x: auto;
+    border: 1px solid rgba(110, 187, 255, 0.14);
+    border-radius: 16px;
+    background: rgba(8, 16, 30, 0.5);
+    scrollbar-color: rgba(110, 187, 255, 0.4) transparent;
+}
+
+.rov-diagram-node {
+    display: flex;
+    flex: 0 0 180px;
+    min-height: 112px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 14px;
+    border: 1px solid rgba(110, 187, 255, 0.2);
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(24, 32, 54, 0.96), rgba(12, 18, 32, 0.96));
+}
+
+.rov-diagram-node strong,
+.rov-diagram-node span {
+    overflow-wrap: anywhere;
+}
+
+.rov-diagram-node span {
+    margin-top: 6px;
+    color: #9fb4d8;
+    font-size: 0.86rem;
+    line-height: 1.4;
+}
+
+.rov-diagram-tether {
+    flex-basis: 130px;
+    border-style: dashed;
+}
+
+.rov-diagram-output {
+    border-color: rgba(120, 220, 174, 0.32);
+}
+
+.rov-diagram-arrow {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    color: #6ebbff;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-roadmap {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 22px;
+}
+
+.status-column {
+    padding: 18px;
+    border: 1px solid rgba(110, 187, 255, 0.14);
+    border-radius: 14px;
+    background: rgba(8, 16, 30, 0.45);
+}
+
+.status-label {
+    margin: 0 0 12px;
+    color: #e8ecf3 !important;
+    font-weight: 700;
+}
+
+.status-column ul,
+.status-column ol {
+    margin: 0;
+    padding-left: 22px;
+    color: #c8d1e0;
+}
+
+.status-column li + li {
+    margin-top: 7px;
+}
+
+.status-complete {
+    border-top: 3px solid rgba(120, 220, 174, 0.65);
+}
+
+.status-pending {
+    border-top: 3px solid rgba(255, 193, 106, 0.65);
+}
+
+.project-video-wrapper {
+    width: min(100%, 504px);
+    aspect-ratio: 9 / 16;
+    margin-top: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(110, 187, 255, 0.2);
+    border-radius: 14px;
+    background: rgba(8, 16, 30, 0.7);
+}
+
+.project-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #050608;
+}
+
+.linkedin-fallback {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 0 0;
+}
+
+.linkedin-fallback .project-card-action {
+    margin-top: 0;
+}
+
 .footer {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     margin-top: 44px;
@@ -699,6 +838,10 @@ textarea {
 
     .spec-table strong {
         text-align: left;
+    }
+
+    .status-roadmap {
+        grid-template-columns: 1fr;
     }
 }
 

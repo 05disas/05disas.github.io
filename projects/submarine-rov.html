@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArduSub-Based Submarine ROV | Disas Sooriyarachchi</title>
+    <title>Eight-Thruster Underwater Inspection ROV | Disas Sooriyarachchi</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
     <div class="page-shell">
         <header class="header">
-            <p class="site-title">ArduSub-Based Submarine ROV</p>
-            <nav class="nav-links">
+            <p class="site-title">Eight-Thruster Inspection ROV</p>
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+                <img src="../assets/menu-icon.svg" alt="" aria-hidden="true">
+            </button>
+            <nav id="primary-navigation" class="nav-links" aria-label="Primary navigation">
                 <a href="../index.html">Home</a>
                 <a href="../index.html#education">Education</a>
                 <a href="../coursework.html">Coursework</a>
@@ -23,47 +26,241 @@
         </header>
 
         <main>
-            <section class="section">
-                <h1>ArduSub-Based Submarine ROV</h1>
-                <p class="subtitle">ArduSub-based underwater ROV rebuild using BlueOS, QGroundControl, Raspberry Pi, and Pixhawk.</p>
+            <section class="section project-hero" aria-labelledby="project-title">
+                <div class="project-hero-copy">
+                    <p class="project-kicker">Idea8 / UAV Engineering Internship</p>
+                    <h1 id="project-title" class="main-title">Eight-Thruster Underwater Inspection ROV</h1>
+                    <p class="subtitle">Turning an existing CAD design into a tethered, ArduSub-based ROV for underwater structure and ship-hull inspection.</p>
+                    <div class="tag-row" aria-label="Project highlights">
+                        <span class="tag">System Integration</span>
+                        <span class="tag">Eight-Thruster 6-DOF</span>
+                        <span class="tag">ArduSub + BlueOS</span>
+                        <span class="tag">Ongoing Development</span>
+                    </div>
+                </div>
+                <figure class="project-figure project-hero-media">
+                    <img src="../assets/images/Projects/Submarine/Picture%20of%20the%20submarine.jpeg" alt="Assembled eight-thruster underwater inspection ROV">
+                    <figcaption>The assembled eight-thruster underwater inspection ROV.</figcaption>
+                </figure>
             </section>
 
-            <section class="section">
-                <div class="cover-placeholder">No cover image available</div>
+            <section id="overview" class="section card case-study-section" aria-labelledby="overview-title">
+                <h2 id="overview-title">Overview</h2>
+                <p>This tethered ROV is being developed for underwater structural inspection, with ship-hull inspection as its main application. It uses a conventional eight-thruster, six-degree-of-freedom architecture inspired by established Blue Robotics-style vehicles.</p>
+                <p>A previous version experienced stability problems, so the current vehicle is larger and follows a more proven thruster layout. The primary CAD design was completed before I joined the project. Because no physical vehicle was available, my work focused on turning that existing design into an assembled, wired, configured, and test-ready system.</p>
             </section>
 
-            <section class="section card">
-                <h2>Overview</h2>
-                <p>This project rebuilt and documented an underwater ROV system around an ArduSub control stack, with emphasis on restoring missing hardware and making the system understandable for continued development.</p>
-            </section>
-
-            <section class="section card">
-                <h2>My Role</h2>
-                <p>As a UAV Engineering Intern at Idea8, I identified missing hardware components, designed replacement parts, sourced suppliers, coordinated manufacturing, and documented the rebuilt system.</p>
-            </section>
-
-            <section class="section card">
-                <h2>Technologies Used</h2>
-                <ul class="card-list">
-                    <li>ArduSub, BlueOS, and QGroundControl.</li>
-                    <li>Raspberry Pi and Pixhawk flight controller.</li>
-                    <li>Replacement part design and supplier coordination.</li>
+            <section id="my-role" class="section card case-study-section" aria-labelledby="role-title">
+                <h2 id="role-title">My Role</h2>
+                <p>I worked independently as a UAV Engineering Intern, with guidance from three engineers involved in the previous version. I owned the practical system-integration work needed to move from an existing CAD model to a physical ROV.</p>
+                <ul class="card-list emphasis-list">
+                    <li>Reviewed the existing CAD design, identified required hardware, and coordinated CNC manufacture of the HDPE frame parts with an overseas supplier.</li>
+                    <li>Communicated dimensions, materials, and manufacturing requirements, then checked and assembled the manufactured frame.</li>
+                    <li>Installed the pressure housings and thrusters, and designed the missing battery holder and adjustable retaining ring.</li>
+                    <li>Installed and wired the flight controller, companion computer, PWM breakout boards, ESCs, camera servo, lights, camera, and associated connections.</li>
+                    <li>Configured BlueOS, ArduSub, tethered Ethernet, QGroundControl, and the surface game controller.</li>
+                    <li>Tested all eight thrusters individually, built a simple tether-management rig, and prepared the system for waterproofing, buoyancy work, and underwater testing.</li>
                 </ul>
             </section>
 
-            <section class="section card">
-                <h2>Challenges</h2>
-                <p>The main challenge was rebuilding an incomplete system while tracking missing components, replacement part needs, and manufacturing constraints.</p>
+            <section id="cad-to-hardware" class="section card case-study-section" aria-labelledby="cad-title">
+                <h2 id="cad-title">From CAD to Physical Hardware</h2>
+                <p>The project began with a completed CAD model, not a complete vehicle. I reviewed the design to identify the frame material, structural hardware, pressure housings, propulsion components, electronics, seals, cable-routing parts, and missing retention hardware required for assembly.</p>
+                <p>I coordinated CNC manufacture of the HDPE frame components with an overseas supplier, including the critical dimensions, material requirements, and manufacturing details. Once the parts arrived, I checked their fit, assembled the frame with its metal structural connectors, and installed the two pressure housings and eight thrusters.</p>
+                <p>The battery installation still needed purpose-built retention hardware, so I designed a battery holder and an adjustable retaining ring for the lower chamber. These parts turned the existing frame design into a practical assembly that could securely package the selected battery.</p>
             </section>
 
-            <section class="section card">
-                <h2>Results / Current Status</h2>
-                <p>The ROV system was rebuilt and documented for continued development and testing.</p>
+            <section id="architecture" class="section card case-study-section" aria-labelledby="architecture-title">
+                <h2 id="architecture-title">System Architecture</h2>
+                <p>The pilot interface, video, vehicle control, and configuration tools all share the same tethered network connection between the surface and the ROV.</p>
+                <div class="rov-system-diagram" role="group" aria-label="ROV communication and control architecture">
+                    <div class="rov-diagram-node"><strong>Fantech Revolver GP12</strong><span>Surface controller</span></div>
+                    <span class="rov-diagram-arrow" aria-hidden="true">&rarr;</span>
+                    <div class="rov-diagram-node"><strong>Surface Laptop</strong><span>QGroundControl<br>Static IP: 192.168.2.1</span></div>
+                    <span class="rov-diagram-arrow" aria-hidden="true">&rarr;</span>
+                    <div class="rov-diagram-node"><strong>USB-to-Ethernet Adapter</strong><span>Laptop network interface</span></div>
+                    <span class="rov-diagram-arrow" aria-hidden="true">&rarr;</span>
+                    <div class="rov-diagram-node"><strong>Topside Interface</strong><span>Ethernet over two wires</span></div>
+                    <span class="rov-diagram-arrow" aria-hidden="true">&rarr;</span>
+                    <div class="rov-diagram-node rov-diagram-tether"><strong>Tether</strong><span>Two-wire data link</span></div>
+                    <span class="rov-diagram-arrow" aria-hidden="true">&rarr;</span>
+                    <div class="rov-diagram-node"><strong>Onboard Interface</strong><span>Two wires to Ethernet</span></div>
+                    <span class="rov-diagram-arrow" aria-hidden="true">&rarr;</span>
+                    <div class="rov-diagram-node"><strong>Raspberry Pi 4</strong><span>BlueOS companion computer</span></div>
+                    <span class="rov-diagram-arrow" aria-hidden="true">&rarr; USB &rarr;</span>
+                    <div class="rov-diagram-node"><strong>Pixhawk 4</strong><span>ArduSub flight controller</span></div>
+                    <span class="rov-diagram-arrow" aria-hidden="true">&rarr;</span>
+                    <div class="rov-diagram-node rov-diagram-output"><strong>Vehicle Outputs</strong><span>8 thrusters<br>Camera tilt servo<br>2 lights</span></div>
+                </div>
+                <div class="detail-grid">
+                    <div><h3>Video</h3><p>Live inspection-camera video is carried to the surface laptop.</p></div>
+                    <div><h3>Vehicle Control</h3><p>MAVLink telemetry and QGroundControl commands share the tether.</p></div>
+                    <div><h3>Configuration</h3><p>BlueOS access, vehicle configuration, and status data remain available topside.</p></div>
+                </div>
+                <!-- TODO: Confirm the exact model of the Ethernet-over-two-wire tether modules. -->
             </section>
 
-            <section class="section card">
-                <h2>Media</h2>
-                <p class="section-note">Additional ROV photos, diagrams, or test media will be added as the project page develops.</p>
+            <section id="mechanical-design" class="section card case-study-section" aria-labelledby="mechanical-title">
+                <h2 id="mechanical-title">Mechanical Design</h2>
+                <p>The approximately 38 &times; 36 &times; 24 cm vehicle uses a CNC-cut HDPE frame joined by metal structural connectors. The larger, conventional layout provides mounting space for eight thrusters and separates the electronics and battery into two pressure housings.</p>
+                <div class="detail-grid">
+                    <div><h3>Upper Housing</h3><p>Contains the avionics and communication electronics.</p></div>
+                    <div><h3>Lower Housing</h3><p>Contains the 4S 5200 mAh LiPo battery and custom retention hardware.</p></div>
+                    <div><h3>Sealing</h3><p>O-ring-sealed housings use WetLink components for waterproof cable routing.</p></div>
+                </div>
+                <h3>Buoyancy and Trim</h3>
+                <p>Buoyancy foam has not yet been installed. During water testing, foam and ballast will be adjusted to bring the ROV close to neutral buoyancy while keeping the center of buoyancy above the center of mass. This arrangement is intended to provide a restoring tendency and improve vehicle stability.</p>
+                <!-- TODO: Confirm vehicle weight, enclosure materials, exact WetLink model, metal alloy names, and buoyancy foam type. -->
+            </section>
+
+            <section id="propulsion" class="section card case-study-section" aria-labelledby="propulsion-title">
+                <h2 id="propulsion-title">Propulsion and 6-DOF Control</h2>
+                <p>Eight ROVMaker 2216 underwater brushless thrusters are arranged using ArduSub&rsquo;s standard eight-thruster, six-degree-of-freedom frame configuration. The intended control axes are:</p>
+                <div class="architecture-grid">
+                    <div><strong>Surge</strong><span>Forward and backward translation</span></div>
+                    <div><strong>Sway</strong><span>Left and right translation</span></div>
+                    <div><strong>Heave</strong><span>Upward and downward translation</span></div>
+                    <div><strong>Roll</strong><span>Rotation about the longitudinal axis</span></div>
+                    <div><strong>Pitch</strong><span>Nose-up and nose-down rotation</span></div>
+                    <div><strong>Yaw</strong><span>Left and right heading rotation</span></div>
+                </div>
+                <p><strong>Testing boundary:</strong> all eight thrusters have been tested individually. Coordinated underwater movement across these six axes has not yet been tested.</p>
+                <!-- TODO: Confirm vehicle speed and measured thrust after underwater testing. -->
+            </section>
+
+            <section id="electronics" class="section card case-study-section" aria-labelledby="electronics-title">
+                <h2 id="electronics-title">Electronics and Software</h2>
+                <p>A Pixhawk 4 running ArduSub manages stabilization, pilot commands, thruster outputs, and accessories. A Raspberry Pi 4 running BlueOS serves as the onboard companion computer and connects to the Pixhawk over USB.</p>
+                <p>I installed and wired the Pixhawk, Raspberry Pi, PWM breakout boards, electronic speed controllers, camera tilt servo, underwater lights, USB inspection camera, Ethernet hardware, and related power and signal connections. I then installed BlueOS, configured ArduSub, set up QGroundControl, mapped the Fantech controller, and verified each thruster output individually.</p>
+                <figure class="project-figure">
+                    <img class="project-image-contain" src="../assets/images/Projects/Submarine/Flight%20stack%20that%20goes%20in%20the%20sub.png" alt="Pixhawk 4, Raspberry Pi 4, PWM breakout boards, and power electronics arranged for the ROV avionics housing" loading="lazy">
+                    <figcaption>The integrated flight stack and power-distribution hardware before installation in the avionics housing.</figcaption>
+                </figure>
+                <!-- TODO: Confirm the exact ArduSub and BlueOS versions. -->
+            </section>
+
+            <section id="communications" class="section card case-study-section" aria-labelledby="communications-title">
+                <h2 id="communications-title">Tethered Communications</h2>
+                <p>The ROV uses a topside and onboard pair of Ethernet-over-two-wire interfaces to carry network traffic through the tether. On the surface, a USB-to-Ethernet adapter connects the interface to the laptop. Onboard, the second interface restores Ethernet for the Raspberry Pi 4.</p>
+                <p>The surface laptop uses the static IP address <strong>192.168.2.1</strong>. This network provides live camera video, MAVLink telemetry, QGroundControl commands, BlueOS access, and vehicle configuration and status data through a single tether connection.</p>
+                <p>I established the full link, configured the Raspberry Pi and topside networking, verified BlueOS access, and built a simple rig to manage the tether during future testing.</p>
+                <figure class="project-figure">
+                    <img class="project-image-contain" src="../assets/images/Projects/Submarine/Tether%20with%20the%20structure%20made%20to%20hold%20it.png" alt="ROV integration collage showing the tether-management rig, electronics, vehicle wiring, and an underwater thruster" loading="lazy">
+                    <figcaption>Integration details including the tether-management rig, electronics packaging, vehicle wiring, and thruster hardware.</figcaption>
+                </figure>
+            </section>
+
+            <section id="camera-lighting" class="section card case-study-section" aria-labelledby="camera-title">
+                <h2 id="camera-title">Camera and Lighting</h2>
+                <p>A USB inspection camera provides the live video feed through BlueOS. It is mounted on a one-axis servo-actuated tilt mechanism so the operator can adjust the viewing angle during inspection.</p>
+                <p>Two controllable underwater lights support inspection in low-visibility areas. Their controls provide on/off operation and brightness adjustment from the surface interface. Underwater image quality, camera movement, and lighting performance still need to be validated during water trials.</p>
+                <!-- TODO: Confirm the exact camera and light models. -->
+            </section>
+
+            <section id="challenges" class="section card case-study-section" aria-labelledby="challenges-title">
+                <h2 id="challenges-title">Engineering Challenges</h2>
+                <article class="challenge-block">
+                    <h3>Compact Wiring and Electronics Packaging</h3>
+                    <p>Power, PWM, USB, Ethernet, camera, lighting, servo, and thruster connections all had to fit inside a small enclosure. The wiring needed to avoid pinching, remain traceable for troubleshooting, and still allow the housing to close and seal correctly.</p>
+                </article>
+                <article class="challenge-block">
+                    <h3>Turning CAD into Hardware</h3>
+                    <p>The original frame design was already complete, but the physical vehicle was not. I had to identify the components, coordinate manufacturing, assemble the structure, and design the missing battery-retention parts.</p>
+                </article>
+                <article class="challenge-block">
+                    <h3>Tethered Networking</h3>
+                    <p>The communication chain required onboard and topside conversion interfaces, Ethernet configuration, Raspberry Pi networking, BlueOS, and QGroundControl to work as one system.</p>
+                </article>
+                <article class="challenge-block">
+                    <h3>Battery Packaging</h3>
+                    <p>The battery chamber restricted the allowable battery dimensions. That constraint influenced the selection of the 4S 5200 mAh LiPo and required a custom holder and adjustable retaining ring.</p>
+                </article>
+                <article class="challenge-block">
+                    <h3>Preparing for Underwater Testing</h3>
+                    <p>Testing must progress methodically through seal checks, leak testing, buoyancy trimming, shallow-water trials, and coordinated motion testing before the ROV can be used for a ship-hull inspection demonstration.</p>
+                </article>
+            </section>
+
+            <section id="status" class="section card case-study-section" aria-labelledby="status-title">
+                <h2 id="status-title">Current Status and Testing Roadmap</h2>
+                <p>The vehicle is mechanically assembled, integrated, and communicating over its tether. Underwater testing has not yet taken place.</p>
+                <div class="status-roadmap">
+                    <div class="status-column status-complete">
+                        <p class="status-label">Completed</p>
+                        <ul>
+                            <li>Mechanical assembly</li>
+                            <li>Pressure-housing installation</li>
+                            <li>Electronics installation</li>
+                            <li>BlueOS and ArduSub configuration</li>
+                            <li>Tethered communication</li>
+                            <li>Camera and accessory integration</li>
+                            <li>Controller setup</li>
+                            <li>Individual testing of all eight thrusters</li>
+                            <li>Tether-management rig</li>
+                        </ul>
+                    </div>
+                    <div class="status-column status-pending">
+                        <p class="status-label">Pending</p>
+                        <ol>
+                            <li>Waterproof and leak testing</li>
+                            <li>Buoyancy foam installation</li>
+                            <li>Ballast and trim adjustment</li>
+                            <li>Coordinated six-degree-of-freedom testing</li>
+                            <li>Shallow-water trials</li>
+                            <li>Underwater camera and lighting validation</li>
+                            <li>Ship-hull inspection demonstration</li>
+                            <li>Maximum depth confirmation</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- TODO: Confirm maximum depth after the appropriate test program. -->
+            </section>
+
+            <section id="specifications" class="section card case-study-section" aria-labelledby="specifications-title">
+                <h2 id="specifications-title">Technical Specifications</h2>
+                <div class="spec-table" role="table" aria-label="ROV technical specifications">
+                    <div role="row"><span role="cell">Purpose</span><strong role="cell">Underwater structure and ship-hull inspection</strong></div>
+                    <div role="row"><span role="cell">Approximate dimensions</span><strong role="cell">38 &times; 36 &times; 24 cm</strong></div>
+                    <div role="row"><span role="cell">Frame</span><strong role="cell">CNC-cut HDPE with metal structural connectors</strong></div>
+                    <div role="row"><span role="cell">Pressure housings</span><strong role="cell">Separate upper avionics and lower battery housings</strong></div>
+                    <div role="row"><span role="cell">Sealing</span><strong role="cell">O-rings and WetLink cable-routing components</strong></div>
+                    <div role="row"><span role="cell">Thrusters</span><strong role="cell">8 &times; ROVMaker 2216 underwater brushless thrusters</strong></div>
+                    <div role="row"><span role="cell">Configuration</span><strong role="cell">ArduSub standard 8-thruster, 6-DOF frame</strong></div>
+                    <div role="row"><span role="cell">Flight controller</span><strong role="cell">Pixhawk 4</strong></div>
+                    <div role="row"><span role="cell">Companion computer</span><strong role="cell">Raspberry Pi 4</strong></div>
+                    <div role="row"><span role="cell">Software</span><strong role="cell">ArduSub, BlueOS, QGroundControl</strong></div>
+                    <div role="row"><span role="cell">Battery</span><strong role="cell">4S 5200 mAh LiPo</strong></div>
+                    <div role="row"><span role="cell">Camera</span><strong role="cell">USB camera with one-axis servo tilt</strong></div>
+                    <div role="row"><span role="cell">Lighting</span><strong role="cell">2 controllable underwater lights</strong></div>
+                    <div role="row"><span role="cell">Controller</span><strong role="cell">Fantech Revolver GP12</strong></div>
+                </div>
+                <!-- TODO: Confirm runtime when representative load testing is complete. -->
+            </section>
+
+            <section id="reflection" class="section card case-study-section" aria-labelledby="reflection-title">
+                <h2 id="reflection-title">Reflection</h2>
+                <blockquote class="reflection">
+                    <p>This project reinforced that system integration is the work of turning many individually reasonable components into one understandable, serviceable vehicle. Starting from an existing CAD design required me to bridge manufacturing, mechanical assembly, electronics packaging, networking, software configuration, and testing preparation.</p>
+                    <p>The next milestone is not simply putting the ROV in water. It is building confidence in stages: prove the seals, establish buoyancy and trim, validate accessories, then test coordinated motion before attempting an inspection mission.</p>
+                </blockquote>
+            </section>
+
+            <section id="media" class="section card case-study-section" aria-labelledby="media-title">
+                <h2 id="media-title">Project Media</h2>
+                <p>The walkthrough below documents the current ROV build and integration work.</p>
+                <h3>Project Walkthrough</h3>
+                <div class="project-video-wrapper">
+                    <video class="project-video" controls preload="metadata" playsinline poster="../assets/videos/submarine-rov-walkthrough-poster.jpg" width="720" height="1280">
+                        <source src="../assets/videos/submarine-rov-walkthrough.mp4" type="video/mp4">
+                        <track src="../assets/videos/submarine-rov-walkthrough.vtt" kind="captions" srclang="en" label="English (auto-generated)">
+                        Your browser does not support embedded HTML video.
+                    </video>
+                </div>
+                <p class="section-note">Video source: a LinkedIn post by Chanaka Prasad, founder of Idea8.</p>
+                <p class="linkedin-fallback">
+                    <span>Prefer to watch it on LinkedIn?</span>
+                    <a class="project-card-action" href="https://www.linkedin.com/feed/update/urn:li:activity:7478779585027858432/" target="_blank" rel="noopener noreferrer">Watch the project walkthrough on LinkedIn</a>
+                </p>
             </section>
         </main>
 
@@ -76,5 +273,6 @@
             </div>
         </footer>
     </div>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>
