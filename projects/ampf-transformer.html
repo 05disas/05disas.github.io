@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMPF Buzz-to-Ford Transformer Robot | Disas Sooriyarachchi</title>
+    <title>Ramblin&rsquo; Wreck &harr; Buzz Transformer | Disas Sooriyarachchi</title>
+    <meta name="description" content="SolidWorks transformation mechanisms, mechanical packaging, polymer prototyping, and approximately 75% design mass reduction at Georgia Tech AMPF.">
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
     <div class="page-shell">
         <header class="header">
-            <p class="site-title">AMPF Buzz-to-Ford Transformer Robot</p>
-            <nav class="nav-links">
+            <p class="site-title">AMPF Transformer</p>
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <img src="../assets/menu-icon.svg" alt="" aria-hidden="true">
+            </button>
+            <nav class="nav-links" aria-label="Primary navigation">
                 <a href="../index.html">Home</a>
                 <a href="../index.html#education">Education</a>
                 <a href="../coursework.html">Coursework</a>
@@ -23,52 +27,77 @@
         </header>
 
         <main>
-            <section class="section">
-                <h1>AMPF Buzz-to-Ford Transformer Robot</h1>
-                <p class="subtitle">SolidWorks-modeled transforming structure for Georgia Tech&rsquo;s Advanced Manufacturing Pilot Facility.</p>
+            <section class="section" aria-labelledby="project-title">
+                <p class="project-kicker">Georgia Tech Advanced Manufacturing Pilot Facility</p>
+                <h1 id="project-title" class="main-title">Ramblin&rsquo; Wreck &harr; Buzz Transformer</h1>
+                <p class="subtitle">Designed and optimized mechanical transformation systems for a large-scale structure that converts Georgia Tech&rsquo;s Ramblin&rsquo; Wreck into Buzz.</p>
+                <p class="small-text">Undergraduate Research Assistant &middot; February 2025 &ndash; December 2025</p>
+                <div class="tag-row" aria-label="Project highlights">
+                    <span class="tag">SolidWorks</span>
+                    <span class="tag">Mechanism Design</span>
+                    <span class="tag">~75% Mass Reduction</span>
+                    <span class="tag">Design for Manufacturing</span>
+                </div>
+                <figure class="project-figure">
+                    <!-- TODO: Replace this placeholder with actual side-by-side CAD views of the Ramblin' Wreck and Buzz configurations. -->
+                    <div class="image-placeholder">Ramblin&rsquo; Wreck / Buzz CAD Comparison Pending</div>
+                    <figcaption>Planned visual: both configurations, showing how the same vehicle components are repackaged into Buzz.</figcaption>
+                </figure>
             </section>
 
-            <section class="section">
-                <div class="cover-placeholder">No cover image available</div>
+            <section class="section case-study-section" aria-labelledby="design-title">
+                <h2 id="design-title">Solving the Transformation</h2>
+                <p>The challenge was not simply modeling a car and a mascot. Each component needed a physical path between the two configurations, with room to move and geometry that could actually be manufactured.</p>
+                <p>I used SolidWorks to develop the transformation architecture, working through moving-part clearances, component interference, and mechanical packaging. Three areas drove much of the mechanism development:</p>
+                <div class="detail-grid">
+                    <div>
+                        <h3>Rear-Stowed Buzz Head</h3>
+                        <p>The front of the vehicle was too narrow for a proportioned head. I developed a rear-storage concept that let the head slide through rectangular cutouts into its deployed position, with pins considered for locking and a cover panel over the storage area.</p>
+                    </div>
+                    <div>
+                        <h3>Retracting Roof</h3>
+                        <p>The roof could not remain projecting out of Buzz. I developed a concept that slid it down into the vehicle body, improving clearance and the final silhouette.</p>
+                    </div>
+                    <div>
+                        <h3>Arm &amp; Shoulder Motion</h3>
+                        <p>I explored rotation about an axis approximately parallel to the vehicle&rsquo;s kingpin axis, along with a telescoping elbow-pin concept to reposition components into Buzz&rsquo;s arms.</p>
+                    </div>
+                </div>
+                <p class="section-note">These were mechanism-development concepts, rather than a claim that all three became final fabricated mechanisms.</p>
+                <!-- TODO: Add real head-deployment, roof-retraction, or shoulder CAD views here, with captions explaining the motion and clearances. -->
             </section>
 
-            <section class="section card">
-                <h2>Overview</h2>
-                <p>This research project modeled a transforming Ramblin&rsquo; Wreck-to-Buzz structure for the Georgia Tech Advanced Manufacturing Pilot Facility.</p>
+            <section class="section case-study-section" aria-labelledby="weight-title">
+                <h2 id="weight-title">A Lighter Structure</h2>
+                <div class="detail-grid" aria-label="Design mass reduction">
+                    <div><h3>~60 kg &rarr; ~15 kg</h3><p>Transformer design mass before and after lightweighting.</p></div>
+                    <div><h3>~75% Reduction</h3><p>Less mass to move, with reduced material use and manufacturing cost as design goals.</p></div>
+                </div>
+                <p>I removed material from overly thick regions and introduced non-circular lightening cutouts in lower-stress areas, aiming to preserve important structural regions and load paths. Lightweight concepts also included carbon-fiber square rods and tubes.</p>
+                <figure class="project-figure">
+                    <!-- TODO: Replace this placeholder with actual before/after SolidWorks geometry showing material removal and retained structural regions. -->
+                    <div class="image-placeholder">Before / After Lightweighting CAD Pending</div>
+                    <figcaption>Planned visual: redesigned thick sections and lightening cutouts, alongside the structural regions retained.</figcaption>
+                </figure>
             </section>
 
-            <section class="section card">
-                <h2>My Role</h2>
-                <p>As an Undergraduate Research Assistant, I modeled the structure in SolidWorks and reduced the mass by 40%.</p>
-            </section>
-
-            <section class="section card">
-                <h2>Technologies Used</h2>
-                <ul class="card-list">
-                    <li>SolidWorks structural modeling.</li>
-                    <li>Design for CNC, PBF, and EDM constraints.</li>
-                    <li>Alloy-based manufacturing strategy exploration.</li>
-                </ul>
-            </section>
-
-            <section class="section card">
-                <h2>Challenges</h2>
-                <p>The design had to preserve geometric detail while meeting manufacturing constraints across CNC, powder bed fusion, and EDM processes.</p>
-            </section>
-
-            <section class="section card">
-                <h2>Results / Current Status</h2>
-                <p>The revised model reduced mass by 40% while supporting continued manufacturing strategy exploration.</p>
-            </section>
-
-            <section class="section card">
-                <h2>Media</h2>
-                <p class="section-note">Additional photos, CAD views, or manufacturing notes will be added as the project page develops.</p>
+            <section class="section case-study-section" aria-labelledby="manufacturing-title">
+                <h2 id="manufacturing-title">Designing Beyond the CAD Model</h2>
+                <div class="tag-row" aria-label="Manufacturing approaches considered">
+                    <span class="tag">CNC Machining</span>
+                    <span class="tag">Metal Powder Bed Fusion</span>
+                    <span class="tag">Wire EDM</span>
+                    <span class="tag">Polymer Prototyping</span>
+                </div>
+                <p>I balanced component detail against process capabilities, achievable tolerances, material usage, and cost. For the head-storage cover, wire EDM was considered to achieve a precise fit and a flush surrounding surface.</p>
+                <p>After the SolidWorks design was largely complete, the project moved into polymer prototyping to validate geometry and transformation concepts before committing to more expensive metal manufacturing.</p>
+                <!-- TODO: Add an actual polymer prototype photo with a caption identifying the geometry or transformation concept being checked. -->
+                <p><a href="../index.html#projects">Back to Projects</a></p>
             </section>
         </main>
 
         <footer class="footer">
-            <p>Disas Sooriyarachchi &mdash; Mechanical Engineering Portfolio</p>
+            <p>Disas Sooriyarachchi - Mechanical Engineering Portfolio</p>
             <div class="social-links">
                 <a href="mailto:dbs6@gatech.edu">Email</a>
                 <a href="https://www.linkedin.com/in/disas">LinkedIn</a>
@@ -76,5 +105,6 @@
             </div>
         </footer>
     </div>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>

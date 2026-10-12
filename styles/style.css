@@ -474,6 +474,17 @@ textarea {
     object-fit: contain;
 }
 
+.mechanism-figure img {
+    display: block;
+    height: auto;
+    min-height: 0;
+}
+
+.mechanism-photo {
+    max-width: 440px;
+    margin-inline: auto;
+}
+
 .project-hero-media {
     margin: 0;
 }

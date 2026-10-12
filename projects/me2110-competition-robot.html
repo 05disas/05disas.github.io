@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ME 2110 Competition Robot | Disas Sooriyarachchi</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <meta name="description" content="Our ME 2110 robot placed 3rd overall and 2nd in design review. I built two of its five subsystems: the drivetrain and pneumatic Koopa mechanism.">
+    <link rel="stylesheet" href="../styles/style.css?v=me2110-photos-20261012">
 </head>
 <body>
     <div class="page-shell">
@@ -13,7 +14,7 @@
             <button class="nav-toggle" type="button" aria-label="Toggle navigation menu">
                 <img src="../assets/menu-icon.svg" alt="" aria-hidden="true">
             </button>
-            <nav class="nav-links">
+            <nav class="nav-links" aria-label="Primary navigation">
                 <a href="../index.html">Home</a>
                 <a href="../index.html#education">Education</a>
                 <a href="../coursework.html">Coursework</a>
@@ -26,56 +27,150 @@
         </header>
 
         <main>
-            <section class="section">
-                <h1>ME 2110 Competition Robot</h1>
-                <p class="subtitle">Georgia Tech ME 2110 design competition robot focused on mechanism design, prototyping, testing, and integration.</p>
+            <section class="section" aria-labelledby="project-title">
+                <p class="project-kicker">Georgia Tech / ME 2110 / Spring 2026</p>
+                <h1 id="project-title" class="main-title">ME 2110 Competition Robot</h1>
+                <p class="subtitle">Our four-person team built an autonomous robot to complete five tasks in 40 seconds on a $120 budget. I designed and built the drivetrain and Koopa-toppling mechanism.</p>
+                <div class="tag-row" aria-label="Competition results and personal focus">
+                    <span class="tag">3rd Overall</span>
+                    <span class="tag">2nd in Design Review</span>
+                    <span class="tag">Drivetrain Design</span>
+                    <span class="tag">Pneumatic Mechanisms</span>
+                </div>
+                <figure class="project-figure">
+                    <img class="project-image-contain" src="../assets/images/me2110_comp.jpeg" alt="Mario-themed competition robot with stacked mechanisms, pneumatic cylinders, tubing, and wheeled base">
+                    <figcaption>Our completed robot with all five subsystems installed.</figcaption>
+                </figure>
+                <nav class="section-jump" aria-label="Case study sections">
+                    <a href="#overview">The challenge</a> &middot;
+                    <a href="#tasks">The five tasks</a> &middot;
+                    <a href="#my-work">My engineering work</a> &middot;
+                    <a href="#system">The full robot</a> &middot;
+                    <a href="#results">Results</a>
+                </nav>
             </section>
 
-            <section class="section">
-                <img class="project-page-cover" src="../assets/images/me2110_comp.jpeg" alt="ME 2110 Competition Robot">
+            <section id="overview" class="section case-study-section" aria-labelledby="overview-title">
+                <h2 id="overview-title">The Challenge</h2>
+                <p>For Georgia Tech&rsquo;s <a href="https://2110.me.gatech.edu/">ME 2110: Creative Decisions &amp; Design</a>, we designed, built, and tested a robot for a Super Mario Galaxy-themed competition. Four robots competed in each 40-second match. Once the match started, the robots had to run on their own without anyone controlling them.</p>
+                <p>We kept the five subsystems mostly independent so that a jam in one mechanism would not stop the others from scoring.</p>
             </section>
 
-            <section class="section card">
-                <h2>Overview</h2>
-                <p>This robot was built for Georgia Tech&rsquo;s ME 2110 design competition, where teams develop, test, and iterate mechanical systems for a final performance challenge.</p>
+            <section id="tasks" class="section case-study-section" aria-labelledby="tasks-title">
+                <h2 id="tasks-title">The Five Tasks</h2>
+                <p>The Mario names referred to physical game pieces and scoring areas on the track. The Galaxy Reactor was the rotating structure in the center of the arena. Each task earned points, and our robot had a separate subsystem for each one.</p>
+                <article class="challenge-block">
+                    <h3>1. Leave the Launch Star</h3>
+                    <p>The Launch Star was the robot&rsquo;s starting area. The robot had to activate when the match began and drive completely out of that area. Our drivetrain also carried the robot to the central reactor for the other tasks.</p>
+                </article>
+                <article class="challenge-block">
+                    <h3>2. Defeat the Koopas</h3>
+                    <p>Two Koopa figures stood in our part of the arena. Moving them earned points, but knocking them over earned more. Our pneumatic arms swung outward to topple them.</p>
+                </article>
+                <article class="challenge-block">
+                    <h3>3. Feed the Lumas</h3>
+                    <p>The robot had to collect coin and starbit game pieces from the central reactor and direct them into their respective scoring areas. Each area had an inner and outer ring, with more points for pieces in the inner ring. Our robot used ramps to sort and guide the pieces using gravity.</p>
+                </article>
+                <article class="challenge-block">
+                    <h3>4. Stabilize the Galaxy Reactor</h3>
+                    <p>The robot carried four Luma payloads and had to place them into separate receptacles on the rotating reactor. Our mechanism used a pneumatic piston to push a payload into place as a receptacle came around.</p>
+                </article>
+                <article class="challenge-block">
+                    <h3>5. Deliver Mario</h3>
+                    <p>The robot had to lift a Mario payload onto one of the reactor&rsquo;s three tiers. Higher tiers earned more points. Our mechanism extended upward to reach the target and release Mario.</p>
+                </article>
             </section>
 
-            <section class="section card">
-                <h2>My Role</h2>
-                <p>I contributed to mechanism design, prototyping, testing, and system integration throughout the project.</p>
+            <section id="my-work" class="section case-study-section" aria-labelledby="work-title">
+                <h2 id="work-title">My Engineering Work</h2>
+                <p>I was responsible for two of the five subsystems, from design and fabrication through testing and installation.</p>
+
+                <article class="challenge-block">
+                    <h3>Drivetrain and Wheel Design</h3>
+                    <p>The drivetrain needed to reach the central reactor in under four seconds. We calculated a minimum wheel speed of about 5.5 rad/s; the robot used a 2:1 geared drivetrain.</p>
+                    <p>The mounting hubs slipped on the axles because they were not properly tightened. Tightening them with the proper tools fixed this.</p>
+                    <p>Separately, the wheels slipped against the track and struggled with bumps and gaps between track sections. I tested four wheel versions to improve grip and get over those joints:</p>
+                    <ol>
+                        <li><strong>V1: Flat, rigid PLA wheel.</strong> It struggled to get over the small bumps and gaps between track sections.</li>
+                        <li><strong>V2: PLA wheel with round cutouts.</strong> It got over the bumps better, but still slipped, especially at higher speed.</li>
+                        <li><strong>V3: V2 geometry printed in TPU.</strong> The flexible material gave it more grip than PLA, but there was still noticeable slipping.</li>
+                        <li><strong>V4: Flat TPU wheel with thin, deformable outer sections.</strong> The outer sections compressed against the track, increasing contact area and grip while allowing the wheel to deform over the joints.</li>
+                    </ol>
+                    <figure class="project-figure mechanism-figure mechanism-photo">
+                        <a href="../assets/images/Projects/ME2110/drivetrain-wheel.jpeg">
+                            <img src="../assets/images/Projects/ME2110/drivetrain-wheel.jpeg" alt="Wheel mounted beneath the robot, showing curved cutouts around the hub" loading="lazy" width="1289" height="1920">
+                        </a>
+                        <figcaption>The wheel installed on the robot, with its mounting hub and cutout geometry visible.</figcaption>
+                    </figure>
+                </article>
+
+                <article class="challenge-block">
+                    <h3>Toppling Koopas with a Pneumatic Linkage</h3>
+                    <p>I designed and built a mechanism that used a pneumatic piston and connecting links to swing upper and lower arms outward. The arms hit the Koopas around their middle and upper sections to knock them over. They fit underneath the robot base, alongside the drivetrain.</p>
+                    <figure class="project-figure mechanism-figure">
+                        <a href="../assets/images/Projects/ME2110/koopa-initial-design.jpeg">
+                            <img src="../assets/images/Projects/ME2110/koopa-initial-design.jpeg" alt="Early Koopa mechanism drawing showing folded and extended arms, pivot locations, and the pneumatic actuator" loading="lazy" width="1111" height="659">
+                        </a>
+                        <figcaption>Initial design showing how the pneumatic actuator and links would swing the arms outward.</figcaption>
+                    </figure>
+                    <figure class="project-figure mechanism-figure">
+                        <a href="../assets/images/Projects/ME2110/koopa-exploded-view.jpeg">
+                            <img src="../assets/images/Projects/ME2110/koopa-exploded-view.jpeg" alt="Exploded CAD view of the Koopa mechanism with the pneumatic cylinder, connecting links, arms, mounts, and fasteners separated" loading="lazy" width="1600" height="784">
+                        </a>
+                        <figcaption>Exploded CAD view of the actuator, links, arms, mounts, and fasteners.</figcaption>
+                    </figure>
+                    <p>The mechanism succeeded close to 100% of the time in testing. The only failures were PLA arms breaking at low infill. After we switched to PETG+ with slightly higher infill, the arms did not break again.</p>
+                    <figure class="project-figure mechanism-figure mechanism-photo">
+                        <a href="../assets/images/Projects/ME2110/koopa-arm-repair.jpeg">
+                            <img src="../assets/images/Projects/ME2110/koopa-arm-repair.jpeg" alt="Koopa arm touching a Koopa figure, with a visible glue repair near the bend in the arm" loading="lazy" width="1200" height="1600">
+                        </a>
+                        <figcaption>The arm touching a Koopa during testing. The glue repair is visible near the bend.</figcaption>
+                    </figure>
+                </article>
             </section>
 
-            <section class="section card">
-                <h2>Technologies Used</h2>
-                <ul class="card-list">
-                    <li>Mechanical design and rapid prototyping.</li>
-                    <li>Testing, iteration, and system integration.</li>
-                    <li>Competition design review preparation.</li>
-                </ul>
+            <section id="system" class="section case-study-section" aria-labelledby="system-title">
+                <h2 id="system-title">The Rest of the Robot</h2>
+                <p>The controller coordinated the drivetrain and scoring mechanisms. I mounted the reactor mechanism and helped refine the Mario mechanism by identifying an opportunity to use 3D-printed slides and reduce friction.</p>
+                <h3>Autonomous Sequence</h3>
+                <p>When the match began, the Arduino-based controller drove the robot to the central reactor. A limit switch at the base detected its arrival, then the pneumatic arms deployed to topple the Koopas. Another limit switch timed Luma placement as the reactor rotated.</p>
+                <p>The robot used two DC motors, pneumatic actuators, solenoids, limit switches, and an IR sensor. A raised platform left room for the electronics and air tank, with wiring routed away from moving parts.</p>
+
+                <details class="challenge-block">
+                    <summary><strong>Feed the Lumas</strong></summary>
+                    <p>Passive ramps used height differences to sort coins and starbits, then gravity to move them toward scoring areas. A calculated minimum ramp angle of about 32 degrees helped coins slide reliably without another actuator.</p>
+                </details>
+                <details class="challenge-block">
+                    <summary><strong>Stabilize the Reactor</strong></summary>
+                    <p>As the reactor rotated, its walls triggered a limit switch. This activated a pneumatic piston that pushed gravity-fed Luma payloads into the receptacles. My involvement was mainly securing this subsystem to the robot.</p>
+                </details>
+                <details class="challenge-block">
+                    <summary><strong>Deliver Mario</strong></summary>
+                    <p>A telescoping mechanism lifted Mario using a motorized spool and string. I noticed that many teams with successful Mario mechanisms used 3D-printed slides. We had initially ruled out that approach because we expected the printed layer ridges to create excessive friction. Revisiting that assumption, we found that the mechanism&rsquo;s steep mounting angle allowed the slides to move without significant resistance from the layer height. We then refined the print orientation so the sliding motion ran parallel to the layers, substantially reducing friction.</p>
+                </details>
             </section>
 
-            <section class="section card">
-                <h2>Challenges</h2>
-                <p>The project required balancing competition performance, manufacturability, mechanism reliability, and fast iteration under course deadlines.</p>
+            <section id="process" class="section case-study-section" aria-labelledby="process-title">
+                <h2 id="process-title">Testing</h2>
+                <p>We organized the work into sprints: short periods focused on a specific goal, such as building or improving a subsystem, then testing it before the next review.</p>
+                <p>I helped document the robot&rsquo;s requirements and subsystem functions. During testing, we recorded failures, likely causes, and changes to try in the next sprint.</p>
             </section>
 
-            <section class="section card">
-                <h2>Results / Current Status</h2>
-                <p>The robot placed 3rd in the final competition and 2nd in design review.</p>
-            </section>
-
-            <section class="section card">
-                <h2>Media</h2>
-                <p class="section-note">Additional robot photos, team media, or performance notes will be added as the project page develops.</p>
-            </section>
-
-            <section class="section card">
-                <p><a href="../index.html">Back to Home</a></p>
+            <section id="results" class="section case-study-section" aria-labelledby="results-title">
+                <h2 id="results-title">Results &amp; Takeaway</h2>
+                <div class="detail-grid">
+                    <div><h3>3rd Overall</h3><p>Spring 2026 ME 2110 final competition.</p></div>
+                    <div><h3>2nd in Design Review</h3><p>Recognition for the team&rsquo;s engineering design work.</p></div>
+                </div>
+                <blockquote class="reflection">
+                    <p>This project taught me to pay as much attention to a wheel hub, a wire route, or a loading arrangement as to the main mechanism. Those details decided whether the robot could repeat a good run. I came away with a better sense of how to turn a promising design into hardware I could trust.</p>
+                </blockquote>
+                <p><a href="../index.html#projects">Back to Projects</a></p>
             </section>
         </main>
 
         <footer class="footer">
-            <p>Disas Sooriyarachchi &mdash; Mechanical Engineering Portfolio</p>
+            <p>Disas Sooriyarachchi - Mechanical Engineering Portfolio</p>
             <div class="social-links">
                 <a href="mailto:dbs6@gatech.edu">Email</a>
                 <a href="https://www.linkedin.com/in/disas">LinkedIn</a>

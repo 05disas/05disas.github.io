@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom FPV Drone Builds and UAV Development | Disas Sooriyarachchi</title>
+    <title>Custom FPV Drone &amp; UAV Development Platform | Disas Sooriyarachchi</title>
+    <meta name="description" content="A custom 5-inch 6S FPV quadcopter evolved into a UAV development platform for ArduPilot integration, sensor debugging, and Python/MAVLink experiments.">
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
     <div class="page-shell">
         <header class="header">
-            <p class="site-title">Custom FPV Drone Builds and UAV Development</p>
-            <nav class="nav-links">
+            <p class="site-title">FPV &amp; UAV Development</p>
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <img src="../assets/menu-icon.svg" alt="" aria-hidden="true">
+            </button>
+            <nav class="nav-links" aria-label="Primary navigation">
                 <a href="../index.html">Home</a>
                 <a href="../index.html#education">Education</a>
                 <a href="../coursework.html">Coursework</a>
@@ -23,52 +27,81 @@
         </header>
 
         <main>
-            <section class="section">
-                <h1>Custom FPV Drone Builds and UAV Development</h1>
-                <p class="subtitle">Custom quadcopter builds, repairs, tuning, and ArduPilot/MAVLink development through personal work and Rotor Jackets.</p>
+            <section class="section" aria-labelledby="project-title">
+                <p class="project-kicker">Personal UAV Development / Ongoing</p>
+                <h1 id="project-title" class="main-title">Custom FPV Drone &amp; UAV Development Platform</h1>
+                <p class="subtitle">What began as recreational FPV flying grew into an interest in UAV development. I designed and assembled a custom quadcopter that could serve both as an FPV aircraft and a platform for sensor integration, wireless telemetry, and Python-based flight experiments.</p>
+                <div class="tag-row" aria-label="Core technologies">
+                    <span class="tag">ArduPilot</span>
+                    <span class="tag">MAVLink</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Sensor Integration</span>
+                </div>
+                <figure class="project-figure">
+                    <img class="project-image-contain" src="../assets/images/fpvdrone.jpeg?v=b72b39e79eee" alt="Custom carbon-fiber FPV quadcopter showing four motors, propellers, forward camera, and onboard electronics">
+                    <figcaption>The custom FPV quadcopter that became my hands-on UAV development platform.</figcaption>
+                </figure>
             </section>
 
-            <section class="section">
-                <img class="project-page-cover" src="../assets/images/fpvdrone.jpeg" alt="Custom FPV Drone Builds and UAV Development">
+            <section class="section case-study-section" aria-labelledby="hardware-title">
+                <h2 id="hardware-title">From Flight Hardware to a Development Platform</h2>
+                <p>After getting into FPV flying for fun, I became increasingly interested in how the aircraft could be programmed and extended. For my next build, I selected components that would support both recreational flight and development work, then assembled the propulsion, flight-control, communications, and sensing systems into one aircraft.</p>
+                <div class="detail-grid">
+                    <div><h3>Flight Hardware</h3><p>5-inch frame, 6S power, MicoAir H743 V2 flight controller, and 70A 4-in-1 ESC.</p></div>
+                    <div><h3>Communications &amp; Sensing</h3><p>ExpressLRS control and MAVLink telemetry, a RadioMaster transmitter, GPS, compass, and a downward-facing MicoAir MTF-02 module combining optical flow and range sensing.</p></div>
+                </div>
+                <p>I worked with both PX4 and ArduPilot; ArduPilot became the main firmware for the experimental platform. My work included firmware flashing, Mission Planner setup, parameter and flight-mode configuration, motor/ESC setup, and debugging UART peripherals and MAVLink communication.</p>
+                <p>I included the sensors needed for future navigation experiments from the outset. GPS provides an outdoor position reference, the compass provides heading information, and the downward-facing optical-flow and range sensors support investigation of motion relative to the ground and height above the surface.</p>
+                <figure class="project-figure">
+                    <img class="project-image-contain" src="../assets/images/fpv-second-build.jpeg" alt="Second custom FPV drone build with a carbon-fiber frame and red propellers" loading="lazy">
+                    <figcaption>My second drone build, assembled to support both FPV flying and UAV development.</figcaption>
+                </figure>
+                <p>I achieved indoor position hold using the downward-facing optical-flow and range-sensing module. This extended the platform beyond outdoor GPS-based flight to position-hold testing indoors.</p>
+                <figure class="project-figure">
+                    <img class="project-image-contain" src="../assets/images/fpv-raspberry-pi-mount.jpeg" alt="Underside of the drone showing a Raspberry Pi in my custom mount and the combined optical-flow and range sensor module" loading="lazy">
+                    <figcaption>The Raspberry Pi installed in the mount I designed, alongside the module that combines downward-facing optical-flow and range sensing.</figcaption>
+                </figure>
             </section>
 
-            <section class="section card">
-                <h2>Overview</h2>
-                <p>This work includes building, repairing, and tuning custom FPV quadcopters, with emphasis on practical flight testing and reliable system setup.</p>
+            <section class="section case-study-section" aria-labelledby="architecture-title">
+                <h2 id="architecture-title">How the Systems Connect</h2>
+                <figure class="project-figure">
+                    <div class="architecture-grid">
+                        <div><strong>Drone &harr; Radio &harr; Wi-Fi Backpack &harr; Laptop</strong><span>The aircraft&rsquo;s ELRS receiver exchanges MAVLink data with the radio&rsquo;s transmitter module over the RF link. The transmitter&rsquo;s TX Backpack creates a Wi-Fi access point that the laptop joins, bridging MAVLink traffic over UDP to the Python software.</span></div>
+                        <div><strong>H743 &rarr; ESC &rarr; Motors</strong><span>ArduPilot connects flight control to the propulsion system; ESC/RPM telemetry is an area of experimentation.</span></div>
+                        <div><strong>Sensors &amp; Radio &harr; H743</strong><span>GPS, MTF-02 on SERIAL4, and ELRS/MAVLink receiver work on SERIAL6.</span></div>
+                    </div>
+                    <figcaption>Integration map for the propulsion, sensing, and laptop-to-aircraft communication systems.</figcaption>
+                </figure>
             </section>
 
-            <section class="section card">
-                <h2>My Role</h2>
-                <p>I handled flight controller setup, parameter configuration, tuning, repairs, and flight testing across custom quadcopter builds.</p>
+            <section class="section case-study-section" aria-labelledby="software-title">
+                <h2 id="software-title">Bringing the Laptop into the Loop</h2>
+                <h3>Wireless MAVLink Communication over ExpressLRS</h3>
+                <p>I established a bidirectional MAVLink connection using the ExpressLRS radio link and the transmitter&rsquo;s TX Backpack. On the aircraft, the ArduPilot flight controller communicates with the ELRS receiver through a UART. The receiver exchanges MAVLink data with the transmitter module in my radio over the RF link. On the ground, the TX Backpack operates as a Wi-Fi access point; my laptop joins that network and exchanges MAVLink messages over UDP using pymavlink.</p>
+                <p>This creates a continuous communication path: aircraft telemetry passes through the ELRS receiver, radio transmitter, and Wi-Fi backpack to the laptop, while commands follow the reverse route to the flight controller. Integrating the connection meant bringing together the aircraft&rsquo;s serial MAVLink interface, the ELRS telemetry transport, and the backpack&rsquo;s Wi-Fi-to-UDP forwarding so laptop-based scripts could communicate with ArduPilot wirelessly.</p>
+                <p>MAVLink is a structured messaging protocol. At the application layer, telemetry messages describe vehicle state, while command messages identify an intended operation and its parameters. Working with this interface requires understanding target system and component IDs, command identifiers, flight modes, and the distinction between sending a request and observing the aircraft&rsquo;s response.</p>
+                <h3>Scripted Takeoff, Altitude, and Landing Tests</h3>
+                <p>Using Python and pymavlink, I developed and tested basic flight sequences that commanded the aircraft to take off from its starting position, ascend to a specified altitude, and land. These experiments connected a laptop-defined sequence to the aircraft&rsquo;s onboard flight-control system, with ArduPilot handling stabilization and execution of the requested flight behavior.</p>
+                <h3>A Reusable Python Wrapper</h3>
+                <p>Writing these sequences exposed how much low-level MAVLink detail was repeated in otherwise simple tasks. I built a Python wrapper class around pymavlink to encapsulate that complexity behind a clearer interface for common flight operations. This abstraction lets the experiment code express the intended behavior while keeping protocol-specific command construction within the wrapper, making subsequent scripts easier to read, reuse, and extend.</p>
+                <p>I have also investigated retrieving ArduPilot flight logs over MAVLink to reduce the need to remove the SD card between experiments.</p>
             </section>
 
-            <section class="section card">
-                <h2>Technologies Used</h2>
-                <ul class="card-list">
-                    <li>ArduPilot flight controller setup and parameter configuration.</li>
-                    <li>Python/MAVLink interface for external flight control and integration.</li>
-                    <li>FPV drone troubleshooting, repair, tuning, and flight testing.</li>
+            <section class="section case-study-section" aria-labelledby="next-title">
+                <h2 id="next-title">What Works, and What Comes Next</h2>
+                <ul class="card-list emphasis-list">
+                    <li><strong>Built and flight-tested:</strong> a custom FPV quadcopter with ArduPilot, GPS and compass integration, a combined optical-flow/range module, and a custom Raspberry Pi mount.</li>
+                    <li><strong>Established and tested:</strong> indoor position hold, laptop-to-aircraft MAVLink communication over ExpressLRS, Python takeoff/altitude/landing sequences, and a reusable pymavlink wrapper class.</li>
+                    <li><strong>Future development:</strong> using the Raspberry Pi as an onboard companion computer to send flight commands to ArduPilot over MAVLink, then adding computer vision to recognize hand gestures and translate them into simple drone maneuvers.</li>
+                    <li><strong>Research direction:</strong> using flight, RPM, IMU, and electrical telemetry to distinguish gradual propulsion degradation from normal battery sag and changing motor loads. Fault detection remains ongoing research.</li>
                 </ul>
-            </section>
-
-            <section class="section card">
-                <h2>Challenges</h2>
-                <p>Reliable flight required careful configuration, repair discipline, and repeated testing to connect hardware behavior with control parameters.</p>
-            </section>
-
-            <section class="section card">
-                <h2>Results / Current Status</h2>
-                <p>This is ongoing personal and Rotor Jackets work, including a custom 5-inch FPV ArduPilot quadcopter.</p>
-            </section>
-
-            <section class="section card">
-                <h2>Media</h2>
-                <p class="section-note">Additional drone photos, frame layouts, or flight test notes will be added as the project page develops.</p>
+                <p><a href="../index.html#projects">Back to Projects</a></p>
             </section>
         </main>
 
         <footer class="footer">
-            <p>Disas Sooriyarachchi &mdash; Mechanical Engineering Portfolio</p>
+            <p>Disas Sooriyarachchi - Mechanical Engineering Portfolio</p>
             <div class="social-links">
                 <a href="mailto:dbs6@gatech.edu">Email</a>
                 <a href="https://www.linkedin.com/in/disas">LinkedIn</a>
@@ -76,5 +109,6 @@
             </div>
         </footer>
     </div>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>
